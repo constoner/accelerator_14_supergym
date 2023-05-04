@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+.vscode
+# package.json
+# package-lock.json для автодеплоя на gh-pages
+*.ai
+*.log
+*.psd
+*.sublime*
+node_modules/
+npm-debug.*
+source/css/*.css
+source/css/*.map
+Thumbs.db
