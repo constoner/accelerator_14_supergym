@@ -591,15 +591,11 @@ button,
   display: inline-flex;
   padding: 10px 20px;
   color: #ffffff;
-  background-color: #2c39f2;
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-}
-.btn--red {
-  background-color: #ff1553;
 }
 .btn:disabled {
   opacity: 0.5;
