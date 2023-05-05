@@ -1,22 +1,27 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
-  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: $ff-default;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   cursor: pointer;
-
+  user-select: none;
   transition: opacity $trans-default;
-
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 
   @include hover-focus {
     opacity: 0.8;
+  }
+
+  &:not(.bicycle:hover):active {
+    opacity: 0.2;
   }
 }

@@ -13,12 +13,12 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 $color-sapphire:                    #102654; // основные заголовки и текст
 $color-resolution-blue:             #1C3374; // фон преимущества и отзывов, текст в акциях
 $color-dark-cerulean:               #14367A; // для обложки видео
+$color-gulf-blue:                   #2A3B63; // тень карточки тренера
 $color-egyptian-blue:               #103AAE; // акцент на ценах
 $color-persian-blue:                #2E35AC; // дополнительный текст преимуществ
 $color-chambray:                    #495A7D; // дополнительный текст в карточках абонементов
 $color-light-slate-grey:            #74819C; // строчки в форме
 $color-spindle:                     #B6BDCC; // дополнительный текст в карточках тренеров
-$color-gulf-blue:                   rgba(42, 59, 99, 0.17); // тень карточки тренера
 $color-grey:                        #787878; // фон указателя табов в карточках абонементов
 $color-dark-gray:                   #AFAFAF; // кнопки свайпера
 $color-whisper:                     #E8E8E8; // тени от цен
@@ -33,19 +33,14 @@ $color-crimson:                     #D10A42; // разделители в пре
 // переменная используемая в html для подключения скейлинга
 $fz-default:                        16px;
 
-$ff-default:                    "Roboto Condensed", "Tahoma", sans-serif;
-$ff-title:                      "Alumni Sans", "Arial Narrow", sans-serif;
+$ff-default:                        "Roboto Condensed", "Tahoma", sans-serif;
+$ff-title:                          "Alumni Sans", "Arial Narrow", sans-serif;
 
 // Animation
 // ---------------------------------
 
-$tf-default:                        ease;
+$tf-default:                        ease-out;
 $trans-default:                     0.3s $tf-default;
-
-// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
-$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
-
-$trans-600:                         0.6s $tf-default;
 
 // Viewports
 // ---------------------------------
@@ -53,9 +48,3 @@ $trans-600:                         0.6s $tf-default;
 $vp-320:                            320px;
 $vp-768:                            768px;
 $vp-1200:                           1200px;
-
-// Retina
-// ---------------------------------
-
-$retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx;
