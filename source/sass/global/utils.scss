@@ -17,6 +17,32 @@
   }
 }
 
+.multisection-background-wrapper {
+  position: relative;
+  background-color: $color-sapphire;
+}
+
+.multisection-background-wrapper__background {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: conic-gradient(from 131.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  @include vp-1199 {
+    background-image: conic-gradient(from 142.49deg at 20.7% 35.74%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  }
+
+  @include vp-767 {
+    background-image: conic-gradient(from 167.26deg at 35.31% 34.22%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  }
+}
+
 .visually-hidden {
   position: absolute;
 

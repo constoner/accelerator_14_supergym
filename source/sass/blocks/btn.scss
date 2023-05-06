@@ -17,11 +17,11 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  @include hover {
+    opacity: 0.6;
   }
 
-  &:not(.bicycle):active {
+  &:not(.crutch):active {
     opacity: 0.2;
   }
 }

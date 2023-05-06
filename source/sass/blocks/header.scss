@@ -1,0 +1,121 @@
+.header {
+  padding: 30px 0;
+  background-color: $color-sapphire;
+
+  @include vp-767 {
+    padding: 10px 0;
+  }
+}
+
+.header__container {
+  position: relative;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  color: $color-default-white;
+
+  & a {
+    display: block;
+    width: fit-content;
+  }
+}
+
+.header__logo {
+  position: relative;
+  padding: 10px 0;
+
+  @include vp-1199 {
+    & img {
+      width: 82px;
+    }
+  }
+
+  @include vp-767 {
+    & img {
+      width: 69px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10px;
+    right: -10px;
+    display: block;
+    border: 2px solid $color-default-white;
+    content: "";
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  @include hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @include focus {
+    outline: 2px solid $color-default-black;
+  }
+
+  &:not(.crutch):active {
+    opacity: 0.2;
+  }
+}
+
+.header__link {
+  position: relative;
+  display: block;
+  font-family: "Alumni Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: inherit;
+  opacity: 1;
+  transition: opacity $trans-default;
+
+  @include vp-1199 {
+    margin: 5px 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -5px;
+    bottom: 5px;
+    left: -10px;
+    right: -10px;
+    display: block;
+    border: 2px solid $color-default-white;
+    content: "";
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  @include hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @include focus {
+    outline: 3px solid $color-default-black;
+  }
+
+  &:not(.crutch):active {
+    opacity: 0.2;
+  }
+}
