@@ -1,0 +1,135 @@
+.about {
+  padding: 120px 0;
+
+  @include vp-1199 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 70px 0;
+  }
+}
+
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include vp-1199 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    text-align: left;
+  }
+}
+
+.about__content {
+  width: 360px;
+  margin: 0 60px;
+  padding-top: 17px;
+
+  @include vp-1199 {
+    width: 510px;
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 26px;
+  }
+
+  & p {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 300;
+  }
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 7px;
+    font-size: 48px;
+    line-height: 58px;
+
+    @include vp-1199 {
+      margin-top: 1px;
+      margin-bottom: -1px;
+      margin-right: 15px;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      margin-top: -7px;
+      margin-bottom: 5px;
+      margin-right: 0;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  & p > b {
+    display: block;
+    margin: 0;
+    margin-bottom: 39px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      margin-bottom: 34px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include vp-1199 {
+    & p:nth-child(n + 4) {
+      display: none;
+    }
+  }
+}
+
+.about__image-container {
+  flex-shrink: 1;
+  width: 660px;
+
+  @include vp-1199 {
+    width: 678px;
+  }
+
+  @include vp-767 {
+    width: 100vw;
+  }
+}
+
+.about__image {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: calc(401 / 660 * 100%);
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  @include vp-1199 {
+    padding-bottom: calc(345 / 678 * 100%);
+  }
+
+  @include vp-767 {
+    padding-bottom: calc(313 / 320 * 100%);
+    object-position: 50% 50%;
+  }
+}
