@@ -1,4 +1,6 @@
 .about {
+  position: relative;
+  height: auto;
   padding: 120px 0;
 
   @include vp-1199 {
@@ -131,5 +133,23 @@
   @include vp-767 {
     padding-bottom: calc(313 / 320 * 100%);
     object-position: 50% 50%;
+  }
+}
+
+.about__video {
+  width: calc(364 / 1366 * 100%);
+  margin-top: -113px;
+  left: 39.5%;
+
+  @include vp-1199 {
+    width: calc(266 / 768 * 100%);
+    margin-top: -84px;
+    left: 32.7%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-top: 40px;
+    left: unset;
   }
 }
