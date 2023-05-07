@@ -24,9 +24,9 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady() {
   playButton.addEventListener('click', () => {
+    player.playVideo();
     videoCover.dataset.videoCoverIsshown = 'false';
     playButton.dataset.playButtonIsshown = 'false';
-    player.playVideo();
   });
 }
 
