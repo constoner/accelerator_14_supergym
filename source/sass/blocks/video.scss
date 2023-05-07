@@ -135,14 +135,14 @@
 
   // состояния кнопки
   @include hover {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 
   @include focus {
     outline: 3px solid $color-default-black;
   }
 
-  &:not(.crutch):active {
-    opacity: 0.6;
+  :not(.crutch):active {
+    opacity: 0.2;
   }
 }
