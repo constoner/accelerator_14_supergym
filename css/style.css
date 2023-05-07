@@ -1410,12 +1410,12 @@ button,
 }
 @media (hover: hover) {
   .video__button:hover:not(.focus-visible) {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 }
 .video__button.focus-visible:focus {
   outline: 3px solid #000000;
 }
-.video__button:not(.crutch):active {
-  opacity: 0.6;
+.video__button :not(.crutch):active {
+  opacity: 0.2;
 }
