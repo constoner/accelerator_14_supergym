@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {onYouTubeIframeAPIReady} from './modules/video/video';
 
 // ---------------------------------
 
@@ -17,7 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
+    setTimeout(() => onYouTubeIframeAPIReady(), 1000);
+    // onYouTubeIframeAPIReady();
     const form = new Form();
     window.form = form;
     form.init();
