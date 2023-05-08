@@ -9,9 +9,16 @@
   padding-bottom: 169px;
   background-color: $color-default-white;
 
+  @include vp-767 {
+    min-height: 384px;
+    padding: 57px 42px;
+    padding-bottom: 151px;
+  }
+
   & dl {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   // общий текст
@@ -27,6 +34,11 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 29px;
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 24px;
+    }
   }
 
   // цена
@@ -38,6 +50,11 @@
     font-size: 60px;
     line-height: 150%;
     color: $color-egyptian-blue;
+
+    @include vp-767 {
+      font-size: 48px;
+      line-height: 150%;
+    }
 
     // тень цены
     &::before {
@@ -53,6 +70,11 @@
       color: rgba($color-whisper, 0.48);
       transform: translate(-50%, -50%);
       content: attr(data-price);
+
+      @include vp-767 {
+        font-size: 80px;
+        line-height: 150%;
+      }
     }
 
     // знак рубля
@@ -62,7 +84,14 @@
       height: 42px;
       margin-left: 15px;
       background-image: url("data:image/svg+xml,%3Csvg width='30' height='42' viewBox='0 0 30 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 17H6V23H0V17Z' fill='%23102654'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z' fill='%23102654'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z' fill='%23102654'/%3E%3C/svg%3E%0A");
+      background-size: contain;
       content: "";
+
+      @include vp-767 {
+        width: 24px;
+        height: 33px;
+        margin-left: 10px;
+      }
     }
   }
 
@@ -99,6 +128,10 @@
 
   @include focus {
     outline: 3px solid $color-default-black;
+  }
+
+  @include vp-767 {
+    bottom: 54px;
   }
 }
 

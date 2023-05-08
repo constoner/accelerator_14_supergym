@@ -3,12 +3,16 @@
 .style-image {
   position: absolute;
   z-index: 1;
-  top: 50%;
+  top: 60%;
   right: 0;
   overflow: hidden;
 
   & img {
     transform-origin: center;
     transform: rotate(151deg) translate(-37%, -15%);
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }

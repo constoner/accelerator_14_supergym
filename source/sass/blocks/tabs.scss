@@ -19,6 +19,18 @@
     height: 2px;
     background-color: rgba($color-grey, 0.2);
     content: "";
+
+    @include vp-767 {
+      bottom: -3px;
+    }
+  }
+
+  @include vp-1199 {
+    margin-bottom: 47px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 38px;
   }
 }
 
@@ -40,6 +52,22 @@
     margin-right: 47px;
   }
 
+  @include vp-1199 {
+    font-size: 18px;
+
+    &:not(:last-child) {
+      margin-right: 55px;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+
+    &:not(:last-child) {
+      margin-right: 46px;
+    }
+  }
+
   &::before {
     position: absolute;
     bottom: 0;
@@ -50,6 +78,10 @@
     opacity: 0;
     transition: opacity $trans-default;
     content: "";
+
+    @include vp-767 {
+      bottom: -3px;
+    }
   }
 
   &.is-active {
