@@ -5,7 +5,7 @@
   align-items: stretch;
   width: 100%;
   min-height: 448px;
-  padding: 68px 77px;
+  padding: 68px 40px;
   padding-bottom: 169px;
   background-color: $color-default-white;
 
@@ -111,32 +111,29 @@
     opacity: 0;
     transition: opacity $trans-default;
   }
-}
 
-// кнопка
-.membership-card__btn {
-  position: absolute;
-  bottom: 68px;
-  padding: 27px 44px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
-  box-shadow: 0 0 0 2px #102654 inset;
-  will-change: color, box-shadow;
-  transition: color $trans-default, box-shadow $trans-default,
-    opacity $trans-default;
+  // кнопка
+  &__btn {
+    position: absolute;
+    bottom: 68px;
+    padding: 27px 44px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    box-shadow: 0 0 0 2px #102654 inset;
+    will-change: color, box-shadow;
+    transition: color $trans-default, box-shadow $trans-default, opacity $trans-default;
 
-  @include focus {
-    outline: 3px solid $color-default-black;
+    @include focus {
+      outline: 3px solid $color-default-black;
+    }
+
+    @include vp-767 {
+      bottom: 54px;
+    }
   }
 
-  @include vp-767 {
-    bottom: 54px;
-  }
-}
-
-// изменение кнопки при ховере на карточку
-.membership-card {
+  // изменение кнопки при ховере на карточку
   @include hover-focus {
     &::before {
       opacity: 1;
