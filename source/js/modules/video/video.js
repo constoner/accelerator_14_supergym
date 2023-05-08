@@ -25,21 +25,21 @@ function onYouTubeIframeAPIReady() {
 function onPlayerReady() {
   playButton.addEventListener('click', () => {
     player.playVideo();
-    videoCover.dataset.videoCoverIsshown = 'false';
-    playButton.dataset.playButtonIsshown = 'false';
+    videoCover.dataset.videoCoverIsshown = false;
+    playButton.dataset.playButtonIsshown = false;
   });
 }
 
 function onPlayerStateChange(event) {
   // eslint-disable-next-line no-undef
   if (event.data === YT.PlayerState.ENDED) {
-    pauseVideo();
+    endedVideo();
   }
 }
 
-function pauseVideo() {
-  videoCover.dataset.videoCoverIsshown = 'true';
-  playButton.dataset.playButtonIsshown = 'true';
+function endedVideo() {
+  videoCover.dataset.videoCoverIsshown = true;
+  playButton.dataset.playButtonIsshown = true;
 }
 
 export {onYouTubeIframeAPIReady};
