@@ -1,0 +1,24 @@
+.membership {
+  position: relative;
+  padding: 120px 0;
+  background-color: $color-ghost-white;
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: 54px;
+    line-height: 65px;
+    text-align: center;
+  }
+}
+
+.membership__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 40px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

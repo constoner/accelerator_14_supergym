@@ -1,0 +1,14 @@
+
+// декоративное изображение
+.style-image {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 0;
+  overflow: hidden;
+
+  & img {
+    transform-origin: center;
+    transform: rotate(151deg) translate(-37%, -15%);
+  }
+}
