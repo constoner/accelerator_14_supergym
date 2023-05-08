@@ -134,7 +134,8 @@
   }
 
   // изменение кнопки при ховере на карточку
-  @include hover-focus {
+  &:hover,
+  &:focus-within {
     &::before {
       opacity: 1;
     }
