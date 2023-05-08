@@ -63,7 +63,7 @@
                 <li>Групповые занятия</li>
                 <li>Кардио-зона</li>
               </ul>
-              <a class="hero__btn btn" href="#!">Купить абонемент</a>
+              <a class="hero__btn btn" href="#membership">Купить абонемент</a>
             </div>
             <div class="hero__image-container">
               <div class="hero__image">
@@ -130,13 +130,183 @@
         </div>
       </section>
 
+      <!-- декортивный элемент -->
+      <div class="style-image" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 767px)"
+          srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9Im5vbmUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCgk8cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIvPg0KPC9zdmc+">
+          <source type="image/webp" srcset="./img/equipment.webp, ./img/equipment@2x.webp 2x">
+          <img src="./img/equipment.jpg" srcset="./img/equipment@2x.jpg 2x" width="322" height="385" alt="">
+        </picture>
+      </div>
+
+      <!-- абонементы -->
+      <section class="membership" id="membership">
+        <div class="container">
+          <div class="membership__container">
+            <h2>Абонементы</h2>
+
+            <!-- табы -->
+            <div class="membership__tabs tabs no-transition-global" data-tabs="parent" data-delay="200"
+              data-height="max">
+              <div class="tabs__controls" data-tabs="controls">
+                <button class="tabs__control is-active" type="button" data-tabs="control">1 месяц</button>
+                <button class="tabs__control" type="button" data-tabs="control">6 месяцев</button>
+                <button class="tabs__control" type="button" data-tabs="control">12 месяцев</button>
+              </div>
+              <div class="tabs__content" data-tabs="content">
+                <!-- таб 1 -->
+                <div class="tabs__element is-active" data-tabs="element">
+                  <ul class="membership__list">
+                    <li class="membership__item">
+                      <div class="membership-card">
+                        <dl>
+                          <dt class="visually-hidden">Тип:</dt>
+                          <dd>С тренером</dd>
+                          <dt class="visually-hidden">Время:</dt>
+                          <dd>12 занятий</dd>
+                          <dt class="visually-hidden">Стоимость</dt>
+                          <dd data-price="5000">5000</dd>
+                        </dl>
+                        <a class="membership-card__btn btn" href="./buy.html">Купить абонемент</a>
+                      </div>
+                    </li>
+                    <li class="membership__item">
+                      <div class="membership-card">
+                        <dl>
+                          <dt class="visually-hidden">Тип:</dt>
+                          <dd>Дневной</dd>
+                          <dt class="visually-hidden">Время:</dt>
+                          <dd>с 8:00 до 17:00 </dd>
+                          <dt class="visually-hidden">Стоимость</dt>
+                          <dd data-price="1700">1700</dd>
+                        </dl>
+                        <a class="membership-card__btn btn" href="./buy.html">Купить абонемент</a>
+                      </div>
+                    </li>
+                    <li class="membership__item">
+                      <div class="membership-card">
+                        <dl>
+                          <dt class="visually-hidden">Тип:</dt>
+                          <dd>Полный день</dd>
+                          <dt class="visually-hidden">Время:</dt>
+                          <dd>с 8:00 до 22:00 </dd>
+                          <dt class="visually-hidden">Стоимость</dt>
+                          <dd data-price="2700">2700</dd>
+                        </dl>
+                        <a class="membership-card__btn btn" href="./buy.html">Купить абонемент</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- таб 2 -->
+                <div class="tabs__element" data-tabs="element">
+                  <ul class="membership__list">
+                    <li class="membership__item">
+                      <div class="membership-card">
+                        <dl>
+                          <dt class="visually-hidden">Тип:</dt>
+                          <dd>С тренером</dd>
+                          <dt class="visually-hidden">Время:</dt>
+                          <dd>12 занятий</dd>
+                          <dt class="visually-hidden">Стоимость</dt>
+                          <dd data-price="25000">25000</dd>
+                        </dl>
+                        <a class="membership-card__btn btn" href="./buy.html">Купить абонемент</a>
+                      </div>
+                    </li>
+                    <li class="membership__item">
+                      <div class="membership-card">
+                        <dl>
+                          <dt class="visually-hidden">Тип:</dt>
+                          <dd>Дневной</dd>
+                          <dt class="visually-hidden">Время:</dt>
+                          <dd>с 8:00 до 17:00 </dd>
+                          <dt class="visually-hidden">Стоимость</dt>
+                          <dd data-price="8000">8000</dd>
+                        </dl>
+                        <a class="membership-card__btn btn" href="./buy.html">Купить абонемент</a>
+                      </div>
+                    </li>
+                    <li class="membership__item">
+                      <div class="membership-card">
+                        <dl>
+                          <dt class="visually-hidden">Тип:</dt>
+                          <dd>Полный день</dd>
+                          <dt class="visually-hidden">Время:</dt>
+                          <dd>с 8:00 до 22:00 </dd>
+                          <dt class="visually-hidden">Стоимость</dt>
+                          <dd data-price="15000">15000</dd>
+                        </dl>
+                        <a class="membership-card__btn btn" href="./buy.html">Купить абонемент</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- таб 3 -->
+                <div class="tabs__element" data-tabs="element">
+                  <ul class="membership__list">
+                    <li class="membership__item">
+                      <div class="membership-card">
+                        <dl>
+                          <dt class="visually-hidden">Тип:</dt>
+                          <dd>С тренером</dd>
+                          <dt class="visually-hidden">Время:</dt>
+                          <dd>12 занятий</dd>
+                          <dt class="visually-hidden">Стоимость</dt>
+                          <dd data-price="40000">40000</dd>
+                        </dl>
+                        <a class="membership-card__btn btn" href="./buy.html">Купить абонемент</a>
+                      </div>
+                    </li>
+                    <li class="membership__item">
+                      <div class="membership-card">
+                        <dl>
+                          <dt class="visually-hidden">Тип:</dt>
+                          <dd>Дневной</dd>
+                          <dt class="visually-hidden">Время:</dt>
+                          <dd>с 8:00 до 17:00 </dd>
+                          <dt class="visually-hidden">Стоимость</dt>
+                          <dd data-price="14000">14000</dd>
+                        </dl>
+                        <a class="membership-card__btn btn" href="./buy.html">Купить абонемент</a>
+                      </div>
+                    </li>
+                    <li class="membership__item">
+                      <div class="membership-card">
+                        <dl>
+                          <dt class="visually-hidden">Тип:</dt>
+                          <dd>Полный день</dd>
+                          <dt class="visually-hidden">Время:</dt>
+                          <dd>с 8:00 до 22:00 </dd>
+                          <dt class="visually-hidden">Стоимость</dt>
+                          <dd data-price="27000">27000</dd>
+                        </dl>
+                        <a class="membership-card__btn btn" href="./buy.html">Купить абонемент</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
     </main>
+
+    <!-- футер -->
     <footer style="padding: 20px; color: #FFFFFF; background-color: #030A1A;">
       <div class="container">
         <img src="./img/svg/logo-large.svg" width="122" height="44" alt="Логотип SUPERGYM.">
       </div>
     </footer>
   </div>
+
+  <!-- скрипты -->
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
