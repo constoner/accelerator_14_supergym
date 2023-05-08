@@ -11,6 +11,8 @@ let player;
 function onYouTubeIframeAPIReady() {
   // eslint-disable-next-line no-undef
   player = new YT.Player('player', {
+    height: '100%',
+    width: '100%',
     videoId: videoSRC,
     playerVars: {
       'playsinline': 1,
