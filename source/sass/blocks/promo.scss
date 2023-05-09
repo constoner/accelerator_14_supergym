@@ -5,19 +5,43 @@ $info-color: $color-default-white;
   @include vp-1199 {
     padding: 100px 0;
   }
+
+  @include vp-767 {
+    padding: 70px 0;
+  }
 }
 
 .promo__container {
   display: flex;
+
+  @include vp-767 {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 1px;
+  }
 }
 
 .promo__image {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
   align-self: stretch;
 
+  @include vp-767 {
+    height: 292px;
+    min-width: 240px;
+  }
+
   & img {
-    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 50% 28%;
   }
 }
 
@@ -42,6 +66,11 @@ $info-color: $color-default-white;
     width: 292px;
     min-height: 292px;
     padding: 51px 45px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr auto;
+    width: 100%;
   }
 
   & h3 {
@@ -106,4 +135,3 @@ $info-color: $color-default-white;
     outline: 3px solid $color-default-black;
   }
 }
-
