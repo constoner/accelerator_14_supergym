@@ -18,7 +18,7 @@
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #007aff;
+  --swiper-theme-color: $color-dark-gray;
 }
 .swiper {
   margin-left: auto;
@@ -41,6 +41,10 @@
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .swiper-android .swiper-slide,
 .swiper-wrapper {

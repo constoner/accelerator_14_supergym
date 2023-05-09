@@ -1,0 +1,157 @@
+.coach-card {
+  width: 260px;
+  filter: drop-shadow(0 0 35px rgba($color-gulf-blue, 0));
+  will-change: filter;
+  transition: filter $trans-default;
+
+  @include vp-1199 {
+    width: 268px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+  }
+}
+
+// обертка для фиксации соотношения сторон
+.coach-card__wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: calc(294 / 260 * 100%);
+
+  @include vp-1199 {
+    padding-bottom: calc(294 / 268 * 100%);
+  }
+
+  @include vp-1199 {
+    padding-bottom: calc(274 / 226 * 100%);
+  }
+}
+
+// фото тренера
+.coach-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c5ccd7;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// обертка для позиционирования имени на фото
+.coach-card__name-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  padding-bottom: 23px;
+}
+
+// имя тренера снаружи и внутри карточки
+.coach-card__name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: $color-default-white;
+  text-align: center;
+  opacity: 1;
+  transition: opacity $trans-default;
+}
+
+// обертка внутренней информации в карточке
+.coach-card__info-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 57px;
+  background-color: rgba($color-sapphire, 0.89);
+  color: $color-default-white;
+  overflow: auto;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity $trans-default;
+
+  @include vp-767 {
+    padding: 40px;
+  }
+
+  // стили для скроллбара
+  scrollbar-color: rgba(155, 155, 155, 0.8);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.8);
+    border-radius: 20px;
+    border: transparent;
+
+    &:hover {
+      background-color: rgba(155, 155, 155, 0.6);
+    }
+
+    &:active {
+      background-color: rgba(155, 155, 155, 0.4);
+    }
+  }
+}
+
+// специализация тренера
+.coach-card__spec {
+  margin: 0;
+  margin-top: -5px;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+}
+
+// список достижений
+.coach-card__achievement {
+  margin-top: 30px;
+  padding: 0;
+
+  & li {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  & li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+// состояния для открытия внутренней информации
+.coach-card:hover,
+.coach-card:focus-within {
+  outline: none;
+  filter: drop-shadow(0 0 35px rgba($color-gulf-blue, 0.17));
+
+  & p.coach-card__name {
+    opacity: 0;
+  }
+
+  .coach-card__info-wrapper {
+    opacity: 1;
+  }
+}

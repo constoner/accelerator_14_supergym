@@ -4,7 +4,7 @@
 @import "vendor/normalize";
 @import "vendor/data-tabs";
 // Swiper 7.4.1
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -30,5 +30,10 @@
 @import "blocks/membership-card";
 @import "blocks/promo";
 @import "blocks/date";
+@import "blocks/coach";
+
+
+
+@import "blocks/coach-card";
 
 // ---------------------------------
