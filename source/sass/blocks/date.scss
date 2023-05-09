@@ -2,6 +2,11 @@
   & dt {
     font-size: 18px;
     line-height: 150%;
+
+    @include vp-1199 {
+      margin-bottom: -1px;
+      font-size: 12px;
+    }
   }
 
   & dd {
@@ -13,6 +18,11 @@
     font-size: 40px;
     line-height: 150%;
 
+    @include vp-1199 {
+      margin-bottom: 0px;
+      font-size: 24px;
+    }
+
     &::before {
       position: absolute;
       top: 5px;
@@ -21,6 +31,10 @@
       height: 1px;
       background-color: $info-color;
       content: "";
+
+      @include vp-1199 {
+        top: 2px;
+      }
     }
 
     &[data-day]::after {
@@ -31,6 +45,12 @@
       font-size: 14px;
       line-height: 130%;
       content: attr(data-day);
+
+      @include vp-1199 {
+        margin-left: 4px;
+        font-size: 10px;
+        line-height: 110%;
+      }
     }
   }
 }

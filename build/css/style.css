@@ -1494,7 +1494,6 @@ button,
 }
 @media (max-width: 1199px) {
   .membership {
-    margin-bottom: 0;
     padding: 100px 0;
   }
 }
@@ -1845,6 +1844,11 @@ button,
 .promo {
   padding: 120px 0 100px;
 }
+@media (max-width: 1199px) {
+  .promo {
+    padding: 100px 0;
+  }
+}
 
 .promo__container {
   display: -webkit-box;
@@ -1883,6 +1887,15 @@ button,
   color: #ffffff;
   background-color: #ed0233;
 }
+@media (max-width: 1199px) {
+  .promo__content {
+    -ms-grid-columns: 146px 1fr;
+    grid-template-columns: 146px 1fr;
+    width: 292px;
+    min-height: 292px;
+    padding: 51px 45px;
+  }
+}
 .promo__content h3 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -1895,6 +1908,14 @@ button,
   color: #ffffff;
   text-align: center;
 }
+@media (max-width: 1199px) {
+  .promo__content h3 {
+    font-size: 48px;
+    margin-top: -1px;
+    margin-bottom: 1px;
+    margin-left: -29px;
+  }
+}
 .promo__content p {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -1905,10 +1926,21 @@ button,
   font-size: 18px;
   line-height: 150%;
 }
+@media (max-width: 1199px) {
+  .promo__content p {
+    margin-bottom: 30px;
+    font-size: 12px;
+  }
+}
 
 .promo__date {
   margin: 0;
   margin-top: -5px;
+}
+@media (max-width: 1199px) {
+  .promo__date {
+    margin-top: -4px;
+  }
 }
 
 .promo__btn {
@@ -1954,6 +1986,15 @@ button,
     -ms-grid-column-span: 2;
   }
 }
+@media (max-width: 1199px) {
+  .promo__btn {
+    min-height: 39px;
+    padding: 10px;
+    font-size: 10px;
+    line-height: 12px;
+    border: 2px solid #ffffff;
+  }
+}
 .promo__btn.focus-visible:focus {
   outline: 3px solid #000000;
 }
@@ -1961,6 +2002,12 @@ button,
 .date dt {
   font-size: 18px;
   line-height: 150%;
+}
+@media (max-width: 1199px) {
+  .date dt {
+    margin-bottom: -1px;
+    font-size: 12px;
+  }
 }
 .date dd {
   position: relative;
@@ -1973,6 +2020,12 @@ button,
   font-size: 40px;
   line-height: 150%;
 }
+@media (max-width: 1199px) {
+  .date dd {
+    margin-bottom: 0px;
+    font-size: 24px;
+  }
+}
 .date dd::before {
   position: absolute;
   top: 5px;
@@ -1981,6 +2034,11 @@ button,
   height: 1px;
   background-color: #ffffff;
   content: "";
+}
+@media (max-width: 1199px) {
+  .date dd::before {
+    top: 2px;
+  }
 }
 .date dd[data-day]::after {
   display: inline-block;
@@ -1992,4 +2050,11 @@ button,
   font-size: 14px;
   line-height: 130%;
   content: attr(data-day);
+}
+@media (max-width: 1199px) {
+  .date dd[data-day]::after {
+    margin-left: 4px;
+    font-size: 10px;
+    line-height: 110%;
+  }
 }
