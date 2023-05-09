@@ -1,9 +1,11 @@
 .membership {
   position: relative;
+  margin-bottom: -2px;
   padding: 120px 0;
   background-color: $color-ghost-white;
 
   @include vp-1199 {
+    margin-bottom: 0;
     padding: 100px 0;
   }
 
