@@ -4,6 +4,12 @@ export const initSwipers = () => {
   const swiperCoach = new Swiper('.swiper--coach', {
     direction: 'horizontal',
     loop: true,
+    autoplay: {
+      delay: 7500,
+      pauseOnMouseEnter: true,
+    },
+    slidesPerView: 4,
+    spaceBetween: 10,
     centeredSlides: true,
     navigation: {
       nextEl: '.swiper-button-next',
