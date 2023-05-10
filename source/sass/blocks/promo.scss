@@ -76,19 +76,27 @@ $info-color: $color-default-white;
 
   & h3 {
     grid-area: title;
+    width: min-content;
     margin-top: 1px;
     margin-bottom: 1px;
-    margin-left: -49px;
+    margin-left: 11px;
+    margin-right: 30px;
     font-size: 82px;
     line-height: 96%;
     color: $info-color;
     text-align: center;
 
     @include vp-1199 {
-      font-size: 48px;
       margin-top: -1px;
       margin-bottom: 1px;
-      margin-left: -29px;
+      margin-left: 6px;
+      margin-right: 20px;
+      font-size: 48px;
+    }
+
+    @include vp-767 {
+      width: auto;
+      text-align: left;
     }
   }
 

@@ -24,17 +24,22 @@ if (SLIDESPERVIEW * 2 <= slides.length) {
 
 export const initSwipers = () => {
 
-  const photoSwiper = new Swiper('.photo-swiper', {
+  const photoSwiper = new Swiper('.coach-swiper', {
     wrapperClass: 'swiper__wrapper',
     slideClass: 'swiper__slide',
     direction: 'horizontal',
     slidesPerView: SLIDESPERVIEW,
     loop: isContinious,
-    autoplay: {
-      delay: 2000,
-      pauseOnMouseEnter: true,
-    },
     breakpoints: {
+      320: {
+        spaceBetween: 20,
+      },
+      768: {
+        spaceBetween: 30,
+      },
+      950: {
+        spaceBetween: 60,
+      },
       1200: {
         spaceBetween: 15,
       },
@@ -65,4 +70,3 @@ export const initSwipers = () => {
 
   // return [swiperCoach, swiperReview];
 };
-

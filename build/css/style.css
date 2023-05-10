@@ -360,6 +360,7 @@ template {
   opacity: 1;
 }
 
+/* stylelint-disable */
 /**
  * Swiper 9.0.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -2239,9 +2240,13 @@ button,
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: title;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   margin-top: 1px;
   margin-bottom: 1px;
-  margin-left: -49px;
+  margin-left: 11px;
+  margin-right: 30px;
   font-size: 82px;
   line-height: 96%;
   color: #ffffff;
@@ -2249,10 +2254,17 @@ button,
 }
 @media (max-width: 1199px) {
   .promo__content h3 {
-    font-size: 48px;
     margin-top: -1px;
     margin-bottom: 1px;
-    margin-left: -29px;
+    margin-left: 6px;
+    margin-right: 20px;
+    font-size: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .promo__content h3 {
+    width: auto;
+    text-align: left;
   }
 }
 .promo__content p {
@@ -2401,6 +2413,16 @@ button,
 .coach {
   padding: 6px 0 140px;
 }
+@media (max-width: 1199px) {
+  .coach {
+    padding: 1px 0 100px;
+  }
+}
+@media (max-width: 767px) {
+  .coach {
+    padding: 1px 0 70px;
+  }
+}
 .coach h2 {
   margin: 0;
   margin-left: 2px;
@@ -2408,20 +2430,81 @@ button,
   font-size: 54px;
   line-height: 65px;
 }
+@media (max-width: 1199px) {
+  .coach h2 {
+    margin-left: 0;
+    margin-right: 6px;
+    margin-bottom: 31px;
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .coach h2 {
+    margin-top: -8px;
+    margin-right: 5px;
+    margin-bottom: 43px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.coach-swiper {
+  position: relative;
+  width: 100%;
+  margin: -70px 0;
+}
+@media (max-width: 1199px) {
+  .coach-swiper {
+    width: 83.48%;
+    margin: -70px auto;
+  }
+}
+@media (max-width: 767px) {
+  .coach-swiper {
+    width: 77.9310344828%;
+  }
+}
+
+.coach-swiper__wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 70px 0;
+}
+
+.coach-swiper__slide {
+  width: calc((100% - 120px) / 4);
+}
+@media (max-width: 1199px) {
+  .coach-swiper__slide {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media (max-width: 1199px) {
+  .coach-swiper__slide {
+    width: 100%;
+  }
+}
 
 .coach__container {
   position: relative;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .coach__container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
 .coach__container [class*=button] {
   position: absolute;
   z-index: 100;
   top: 46.3%;
   display: block;
-  margin: 0;
-  padding: 0;
   width: 27px;
   height: 33px;
+  margin: 0;
   padding: 0 5px;
   background-color: transparent;
   background-image: url("data:image/svg+xml,%3Csvg width='18' height='34' viewBox='0 0 18 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 33L0.999999 17L17 0.999998' stroke='%23AFAFAF'/%3E%3C/svg%3E%0A");
@@ -2437,6 +2520,15 @@ button,
   transition: outline 0.2s ease-out;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+}
+@media (max-width: 767px) {
+  .coach__container [class*=button] {
+    top: 46.2%;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background-size: 11px 20px;
+  }
 }
 .coach__container [class*=button]:disabled {
   opacity: 0.5;
@@ -2456,28 +2548,21 @@ button,
 .coach__container [class*="--prev"] {
   left: -67px;
 }
+@media (max-width: 1199px) {
+  .coach__container [class*="--prev"] {
+    left: -11px;
+  }
+}
 .coach__container [class*="--next"] {
   right: -67px;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-
-.photo-swiper {
-  position: relative;
-  width: 100%;
-  margin: -70px 0;
-}
-
-.photo-swiper__wrapper {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  padding: 70px 0;
-}
-
-.photo-swiper__slide {
-  width: calc((100% - 120px) / 4);
+@media (max-width: 1199px) {
+  .coach__container [class*="--next"] {
+    right: -11px;
+  }
 }
 
 .coach-card {
@@ -2503,7 +2588,7 @@ button,
     padding-bottom: 109.7014925373%;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .coach-card__wrapper {
     padding-bottom: 121.2389380531%;
   }
@@ -2546,9 +2631,11 @@ button,
 
 .coach-card__name {
   margin: 0;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 150%;
+  letter-spacing: 0.01em;
   color: #ffffff;
   text-align: center;
   opacity: 1;
@@ -2563,7 +2650,8 @@ button,
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 21.92%;
+  padding: 19.5%;
+  padding-bottom: 18px;
   background-color: rgba(16, 38, 84, 0.89);
   color: #ffffff;
   overflow: auto;
@@ -2578,6 +2666,12 @@ button,
 @media (max-width: 767px) {
   .coach-card__info-wrapper {
     padding: 21.92%;
+  }
+}
+@media (max-width: 767px) {
+  .coach-card__info-wrapper {
+    padding: 19% 13%;
+    padding-bottom: 15%;
   }
 }
 .coach-card__info-wrapper::-webkit-scrollbar {
@@ -2607,15 +2701,19 @@ button,
 }
 
 .coach-card__achievement {
-  margin-top: 30px;
+  margin-top: 34px;
+  margin-left: 15.5px;
+  margin-right: -7px;
   padding: 0;
+  list-style-type: disc;
 }
 .coach-card__achievement li {
+  padding-left: 5px;
   font-size: 14px;
   line-height: 150%;
 }
 .coach-card__achievement li:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .coach-card:hover,
