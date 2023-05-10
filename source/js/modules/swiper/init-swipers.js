@@ -1,32 +1,68 @@
-import Swiper from '../../vendor/swiper';
+import Swiper from '../../vendor/swiper-bundle';
+
+const SlidesPerView = {
+  MOBILE: 1,
+  TABLET: 2,
+  DESKTOP: 4,
+};
+
+const slides = document.querySelectorAll('.swiper__slide');
+const width = window.innerWidth;
+
+let SLIDESPERVIEW;
+if (width < 768) {
+  SLIDESPERVIEW = SlidesPerView.MOBILE;
+} else if (width < 1200) {
+  SLIDESPERVIEW = SlidesPerView.TABLET;
+} else {
+  SLIDESPERVIEW = SlidesPerView.DESKTOP;
+}
+let isContinious = false;
+if (SLIDESPERVIEW * 2 <= slides.length) {
+  isContinious = true;
+}
 
 export const initSwipers = () => {
-  const swiperCoach = new Swiper('.swiper--coach', {
+
+  const photoSwiper = new Swiper('.photo-swiper', {
+    wrapperClass: 'swiper__wrapper',
+    slideClass: 'swiper__slide',
     direction: 'horizontal',
-    loop: true,
+    slidesPerView: SLIDESPERVIEW,
+    loop: isContinious,
     autoplay: {
-      delay: 7500,
+      delay: 2000,
       pauseOnMouseEnter: true,
     },
-    slidesPerView: 4,
-    spaceBetween: 10,
-    centeredSlides: true,
+    breakpoints: {
+      1200: {
+        spaceBetween: 15,
+      },
+      1250: {
+        spaceBetween: 30,
+      },
+      1350: {
+        spaceBetween: 40,
+      },
+    },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper__button--next',
+      prevEl: '.swiper__button--prev',
     },
   });
 
-  const swiperReview = new Swiper('.swiper--coach', {
-    direction: 'horizontal',
-    loop: true,
-    centeredSlides: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+  return photoSwiper;
 
-  return [swiperCoach, swiperReview];
+  // const swiperReview = new Swiper('.swiper--coach', {
+  //   direction: 'horizontal',
+  //   loop: true,
+  //   centeredSlides: true,
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  // });
+
+  // return [swiperCoach, swiperReview];
 };
 
