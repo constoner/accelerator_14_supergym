@@ -24,12 +24,13 @@ if (SLIDESPERVIEW * 2 <= slides.length) {
 
 export const initSwipers = () => {
 
-  const photoSwiper = new Swiper('.coach-swiper', {
+  const photoSwiper = new Swiper('.swiper', {
     wrapperClass: 'swiper__wrapper',
     slideClass: 'swiper__slide',
     direction: 'horizontal',
     slidesPerView: SLIDESPERVIEW,
     loop: isContinious,
+
     breakpoints: {
       320: {
         spaceBetween: 20,

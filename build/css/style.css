@@ -2450,19 +2450,19 @@ button,
   }
 }
 
-.coach-swiper {
+.coach-swiper__main {
   position: relative;
   width: 100%;
   margin: -70px 0;
 }
 @media (max-width: 1199px) {
-  .coach-swiper {
+  .coach-swiper__main {
     width: 83.48%;
     margin: -70px auto;
   }
 }
 @media (max-width: 767px) {
-  .coach-swiper {
+  .coach-swiper__main {
     width: 77.9310344828%;
   }
 }
@@ -2487,17 +2487,18 @@ button,
   }
 }
 
-.coach__container {
+.coach-swiper {
   position: relative;
   width: 100%;
 }
 @media (max-width: 767px) {
-  .coach__container {
+  .coach-swiper {
     max-width: 500px;
     margin: 0 auto;
   }
 }
-.coach__container [class*=button] {
+
+.coach-swiper__button {
   position: absolute;
   z-index: 100;
   top: 46.3%;
@@ -2522,7 +2523,7 @@ button,
           box-sizing: content-box;
 }
 @media (max-width: 767px) {
-  .coach__container [class*=button] {
+  .coach-swiper__button {
     top: 46.2%;
     width: 32px;
     height: 32px;
@@ -2530,37 +2531,37 @@ button,
     background-size: 11px 20px;
   }
 }
-.coach__container [class*=button]:disabled {
+.coach-swiper__button:disabled {
   opacity: 0.5;
   pointer-events: none;
 }
-.coach__container [class*=button].focus-visible:focus {
+.coach-swiper__button.focus-visible:focus {
   outline: 2px solid #000000;
 }
 @media (hover: hover) {
-  .coach__container [class*=button]:hover:not(.focus-visible) {
+  .coach-swiper__button:hover:not(.focus-visible) {
     outline: 2px solid rgba(175, 175, 175, 0.8);
   }
 }
-.coach__container [class*=button]:not(.crutch):active {
+.coach-swiper__button:not(.crutch):active {
   opacity: 0.2;
 }
-.coach__container [class*="--prev"] {
+.coach-swiper__button--prev {
   left: -67px;
 }
 @media (max-width: 1199px) {
-  .coach__container [class*="--prev"] {
+  .coach-swiper__button--prev {
     left: -11px;
   }
 }
-.coach__container [class*="--next"] {
+.coach-swiper__button--next {
   right: -67px;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 @media (max-width: 1199px) {
-  .coach__container [class*="--next"] {
+  .coach-swiper__button--next {
     right: -11px;
   }
 }

@@ -328,10 +328,10 @@
       <section class="coach">
         <div class="container">
           <h2>Тренеры</h2>
-
-          <div class="coach__container">
+          <!-- обертка для выноса кнопок свайпера -->
+          <div class="coach__container coach-swiper">
             <!-- свайпер -->
-            <div class="coach__swiper coach-swiper swiper">
+            <div class="coach-swiper__content swiper">
               <!-- обертка свайпера -->
               <ul class="coach-swiper__wrapper swiper__wrapper">
 
@@ -547,10 +547,10 @@
 
             </div>
             <!-- навигация свайпера -->
-            <button class="swiper__button--prev" type="button">
+            <button class="coach-swiper__button coach-swiper__button--prev swiper__button--prev" type="button">
               <span class="visually-hidden">Предыдущий слайд.</span>
             </button>
-            <button class="swiper__button--next" type="button">
+            <button class="coach-swiper__button coach-swiper__button--next swiper__button--next" type="button">
               <span class="visually-hidden">Следующий слайд.</span>
             </button>
           </div>
