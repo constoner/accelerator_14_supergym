@@ -1,0 +1,116 @@
+.features {
+  padding: 52px 0 140px;
+  background-color: $color-ghost-white;
+
+  h2 {
+    margin-left: 11px;
+    margin-bottom: 55px;
+    font-size: 54px;
+    line-height: 65px;
+    text-align: center;
+  }
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: 1fr 240px 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 60px;
+  width: calc(1040 / 1366 * 100%);
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.features__item {
+
+
+
+  .features-card {
+
+
+  }
+
+  .features-card__title {
+
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150%;
+  }
+
+  .features-card__value {
+
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: lowercase;
+    color: $color-persian-blue;
+
+    &::before {
+      display: block;
+
+      font-weight: 700;
+      font-size: 71px;
+      line-height: 150%;
+      content: attr(data-feature);
+    }
+  }
+
+  .features-card__description {
+
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+.features__item--accent {
+  grid-column: 2/3;
+  grid-row: 1 / 99; // хак для растягивания на всю колонку
+  padding: 65px 34px;
+  padding-bottom: 58px;
+  text-align: center;
+  color: $color-default-white;
+  background-color: $color-resolution-blue;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  width: unset;
+
+  .features-card {
+    display: block;
+    width: unset;
+    margin: 0;
+
+  }
+
+  .features-card__title {
+    display: none;
+  }
+
+  .features-card__value {
+    margin: 0;
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 150%;
+    text-transform: capitalize;
+    color: inherit;
+
+    &::before {
+      display: block;
+      margin-top: -29px;
+      margin-bottom: -17px;
+      font-weight: 700;
+      font-size: 74px;
+      line-height: 150%;
+      content: attr(data-feature);
+    }
+  }
+
+  .features-card__description {
+    grid-area: none;
+    margin: 0;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
