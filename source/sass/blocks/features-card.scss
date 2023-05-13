@@ -8,6 +8,21 @@
   column-gap: 30px;
   max-width: 340px;
   margin-bottom: -7px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "value"
+      "title"
+      "description";
+    gap: 0;
+    justify-items: center;
+    width: 84%;
+    max-width: unset;
+    margin: 0;
+    padding: 0 20px;
+    text-align: center;
+  }
 }
 
 // заголовок
@@ -20,8 +35,14 @@
   line-height: 150%;
 
   @include vp-1199 {
-    margin: -12px 0 0 0;
+    margin: 0;
+    margin-top: -12px;
     font-size: 20px;
+  }
+
+  @include vp-767 {
+    margin-top: 6px;
+    margin-bottom: 1px;
   }
 }
 
@@ -36,7 +57,7 @@
   color: $color-persian-blue;
 
   @include vp-1199 {
-    margin: 0 0 0 0;
+    margin: 0;
   }
 
   // число -число
@@ -52,8 +73,15 @@
     background-clip: text;
 
     @include vp-1199 {
-      margin: -26px 0 -18px 0;
+      margin: 0;
+      margin-top: -26px;
+      margin-bottom: -18px;
       font-size: 58px;
+    }
+
+    @include vp-767 {
+      margin-top: -22px;
+      margin-bottom: -18px;
     }
   }
 }
@@ -85,6 +113,12 @@
     padding: 30px;
   }
 
+  @include vp-767 {
+    width: 65%;
+    max-width: unset;
+    padding: 0;
+  }
+
   .features-card__title {
     visibility: hidden;
   }
@@ -103,6 +137,10 @@
       font-size: 22px;
     }
 
+    @include vp-767 {
+      margin-bottom: 8px;
+    }
+
     & b {
       display: block;
       margin-top: -30px;
@@ -118,6 +156,11 @@
         margin-top: -34px;
         margin-bottom: -19px;
       }
+
+      @include vp-767 {
+        margin-top: -38px;
+        margin-bottom: -24px;
+      }
     }
   }
 
@@ -131,6 +174,10 @@
 
     @include vp-1199 {
       margin-bottom: 9px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 24px;
     }
   }
 }

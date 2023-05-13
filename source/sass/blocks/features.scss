@@ -6,6 +6,10 @@
     padding: 100px 0;
   }
 
+  @include vp-767 {
+    padding: 70px 0;
+  }
+
   h2 {
     margin: 0;
     margin-left: 11px;
@@ -21,6 +25,14 @@
       margin-bottom: 55px;
       font-size: 42px;
       line-height: 50px;
+    }
+
+    @include vp-767 {
+      margin-top: -7px;
+      margin-right: 17px;
+      margin-bottom: 51px;
+      font-size: 32px;
+      line-height: 38px;
     }
   }
 }
@@ -47,6 +59,12 @@
     margin-bottom: 0;
     padding: 0 45px;
   }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    row-gap: 42px;
+    padding: 0;
+  }
 }
 
 // карточка
@@ -57,6 +75,10 @@
 
   @include vp-1199 {
     margin: 0;
+  }
+
+  @include vp-767 {
+    justify-content: center;
   }
 }
 
@@ -70,6 +92,10 @@
     @include vp-1199 {
       margin-right: 0;
     }
+  }
+
+  @include vp-767 {
+    justify-content: center;
   }
 }
 
@@ -112,9 +138,18 @@
     grid-row: 2/3;
     justify-self: center;
     justify-content: center;
-    width: calc(442 / (768 - 45 * 2) * 100%);
+    width: 442px;
     margin: 0;
     margin-top: 1px;
     margin-bottom: 4px;
+  }
+
+  @include vp-767 {
+    grid-row: 3/4;
+    width: 100%;
+    margin: 0;
+    margin-top: 2px;
+    margin-bottom: 7px;
+    padding: 20px;
   }
 }
