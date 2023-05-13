@@ -2708,15 +2708,31 @@ button,
 }
 
 .features {
-  padding: 52px 0 140px;
+  padding: 97px 0 140px;
   background-color: #f8f9fc;
 }
+@media (max-width: 1199px) {
+  .features {
+    padding: 100px 0;
+  }
+}
 .features h2 {
+  margin: 0;
   margin-left: 11px;
   margin-bottom: 55px;
   font-size: 54px;
   line-height: 65px;
   text-align: center;
+}
+@media (max-width: 1199px) {
+  .features h2 {
+    margin-top: -9px;
+    margin-left: 0px;
+    margin-right: 22px;
+    margin-bottom: 55px;
+    font-size: 42px;
+    line-height: 50px;
+  }
 }
 
 .features__list {
@@ -2736,6 +2752,21 @@ button,
   padding: 0;
   list-style-type: none;
 }
+@media (max-width: 1199px) {
+  .features__list {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    row-gap: 50px;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0 45px;
+  }
+}
 
 .features__item {
   position: relative;
@@ -2743,6 +2774,11 @@ button,
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 165px;
+}
+@media (max-width: 1199px) {
+  .features__item {
+    margin: 0;
+  }
 }
 
 .features__item:nth-child(2n+2) {
@@ -2752,6 +2788,11 @@ button,
 }
 .features__item:nth-child(2n+2) .features__card {
   margin-right: -20px;
+}
+@media (max-width: 1199px) {
+  .features__item:nth-child(2n+2) .features__card {
+    margin-right: 0;
+  }
 }
 
 .features__item:nth-child(2n+4)::before,
@@ -2765,6 +2806,12 @@ button,
   background-color: #d10a42;
   opacity: 0.2;
   content: "";
+}
+@media (max-width: 1199px) {
+  .features__item:nth-child(2n+4)::before,
+.features__item:nth-child(2n+5)::before {
+    display: none;
+  }
 }
 
 .features__item--accent {
@@ -2786,6 +2833,23 @@ button,
   width: unset;
   margin-left: 1px;
   margin-right: -1px;
+}
+@media (max-width: 1199px) {
+  .features__item--accent {
+    grid-column: 1/-1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 65.191740413%;
+    margin: 0;
+    margin-top: 1px;
+    margin-bottom: 4px;
+  }
 }
 
 .features-card {
@@ -2821,6 +2885,12 @@ button,
   -ms-grid-row: 1;
   -ms-grid-column: 3;
 }
+@media (max-width: 1199px) {
+  .features-card__title {
+    margin: -12px 0 0 0;
+    font-size: 20px;
+  }
+}
 
 .features-card__value {
   -ms-grid-row: 1;
@@ -2834,6 +2904,11 @@ button,
   text-transform: lowercase;
   color: #2e35ac;
 }
+@media (max-width: 1199px) {
+  .features-card__value {
+    margin: 0 0 0 0;
+  }
+}
 .features-card__value b {
   display: block;
   margin-bottom: -21px;
@@ -2845,6 +2920,12 @@ button,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+@media (max-width: 1199px) {
+  .features-card__value b {
+    margin: -26px 0 -18px 0;
+    font-size: 58px;
+  }
 }
 
 .features-card__description {
@@ -2897,8 +2978,16 @@ button,
   text-align: center;
   color: #ffffff;
 }
+@media (max-width: 1199px) {
+  .features-card--accent {
+    width: 100%;
+    max-width: 245px;
+    margin: 0;
+    padding: 30px;
+  }
+}
 .features-card--accent .features-card__title {
-  display: none;
+  visibility: hidden;
 }
 .features-card--accent .features-card__value {
   margin: 0;
@@ -2908,6 +2997,12 @@ button,
   line-height: 150%;
   text-transform: capitalize;
   color: inherit;
+}
+@media (max-width: 1199px) {
+  .features-card--accent .features-card__value {
+    margin-bottom: 13px;
+    font-size: 22px;
+  }
 }
 .features-card--accent .features-card__value b {
   display: block;
@@ -2920,6 +3015,12 @@ button,
   background: unset;
   -webkit-text-fill-color: unset;
 }
+@media (max-width: 1199px) {
+  .features-card--accent .features-card__value b {
+    margin-top: -34px;
+    margin-bottom: -19px;
+  }
+}
 .features-card--accent .features-card__description {
   grid-area: none;
   margin: 0;
@@ -2927,4 +3028,9 @@ button,
   line-height: 150%;
   color: inherit;
   background: unset;
+}
+@media (max-width: 1199px) {
+  .features-card--accent .features-card__description {
+    margin-bottom: 9px;
+  }
 }

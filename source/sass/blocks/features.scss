@@ -1,20 +1,35 @@
 .features {
-  padding: 52px 0 140px;
+  padding: 97px 0 140px;
   background-color: $color-ghost-white;
 
+  @include vp-1199 {
+    padding: 100px 0;
+  }
+
   h2 {
+    margin: 0;
     margin-left: 11px;
     margin-bottom: 55px;
     font-size: 54px;
     line-height: 65px;
     text-align: center;
+
+    @include vp-1199 {
+      margin-top: -9px;
+      margin-left: 0px;
+      margin-right: 22px;
+      margin-bottom: 55px;
+      font-size: 42px;
+      line-height: 50px;
+    }
   }
 }
 
+// список
 .features__list {
   display: grid;
   grid-template-columns: 1fr 240px 1fr;
-  grid-template-rows: 236px;
+  grid-template-rows: min(236px);
   column-gap: 60px;
   width: calc(1040 / 1366 * 100%);
   max-width: 1160px;
@@ -22,12 +37,27 @@
   margin-bottom: -165px; // хак для компенсации вертикальных отступов между карточками
   padding: 0;
   list-style-type: none;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 30px;
+    row-gap: 50px;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0 45px;
+  }
 }
 
+// карточка
 .features__item {
   position: relative;
   display: flex;
   margin-bottom: 165px;
+
+  @include vp-1199 {
+    margin: 0;
+  }
 }
 
 // выбирает только первый столбец
@@ -36,6 +66,10 @@
 
   & .features__card {
     margin-right: -20px;
+
+    @include vp-1199 {
+      margin-right: 0;
+    }
   }
 }
 
@@ -53,8 +87,15 @@
     opacity: 0.2;
     content: "";
   }
+
+  @include vp-1199 {
+    &::before {
+      display: none;
+    }
+  }
 }
 
+// акцентная фича
 .features__item--accent {
   grid-column: 2/3;
   grid-row: 1 / 99; // хак для растягивания на всю колонку
@@ -65,4 +106,15 @@
   width: unset;
   margin-left: 1px;
   margin-right: -1px;
+
+  @include vp-1199 {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    justify-self: center;
+    justify-content: center;
+    width: calc(442 / (768 - 45 * 2) * 100%);
+    margin: 0;
+    margin-top: 1px;
+    margin-bottom: 4px;
+  }
 }

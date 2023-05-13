@@ -1,3 +1,4 @@
+// обертка карточки
 .features-card {
   display: grid;
   grid-template-columns: auto auto;
@@ -9,6 +10,7 @@
   margin-bottom: -7px;
 }
 
+// заголовок
 .features-card__title {
   grid-area: title;
   margin: 0;
@@ -16,8 +18,14 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 150%;
+
+  @include vp-1199 {
+    margin: -12px 0 0 0;
+    font-size: 20px;
+  }
 }
 
+// число - единица измерения
 .features-card__value {
   grid-area: value;
   margin: 0;
@@ -27,6 +35,11 @@
   text-transform: lowercase;
   color: $color-persian-blue;
 
+  @include vp-1199 {
+    margin: 0 0 0 0;
+  }
+
+  // число -число
   & b {
     display: block;
     margin-bottom: -21px;
@@ -37,9 +50,15 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+
+    @include vp-1199 {
+      margin: -26px 0 -18px 0;
+      font-size: 58px;
+    }
   }
 }
 
+// описание
 .features-card__description {
   grid-area: description;
   margin: 0;
@@ -48,6 +67,7 @@
   font-weight: 300;
 }
 
+// акцентная карточка
 .features-card--accent {
   display: block;
   width: unset;
@@ -58,8 +78,15 @@
   text-align: center;
   color: $color-default-white;
 
+  @include vp-1199 {
+    width: 100%;
+    max-width: 245px;
+    margin: 0;
+    padding: 30px;
+  }
+
   .features-card__title {
-    display: none;
+    visibility: hidden;
   }
 
   .features-card__value {
@@ -71,6 +98,11 @@
     text-transform: capitalize;
     color: inherit;
 
+    @include vp-1199 {
+      margin-bottom: 13px;
+      font-size: 22px;
+    }
+
     & b {
       display: block;
       margin-top: -30px;
@@ -81,6 +113,11 @@
       line-height: 150%;
       background: unset;
       -webkit-text-fill-color: unset;
+
+      @include vp-1199 {
+        margin-top: -34px;
+        margin-bottom: -19px;
+      }
     }
   }
 
@@ -91,5 +128,9 @@
     line-height: 150%;
     color: inherit;
     background: unset;
+
+    @include vp-1199 {
+      margin-bottom: 9px;
+    }
   }
 }
