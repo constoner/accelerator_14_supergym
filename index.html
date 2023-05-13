@@ -210,7 +210,7 @@
                           <dt class="visually-hidden">Тип:</dt>
                           <dd>С тренером</dd>
                           <dt class="visually-hidden">Время:</dt>
-                          <dd>12 занятий</dd>
+                          <dd>80 занятий</dd>
                           <dt class="visually-hidden">Стоимость</dt>
                           <dd data-price="25000">25000</dd>
                         </dl>
@@ -255,7 +255,7 @@
                           <dt class="visually-hidden">Тип:</dt>
                           <dd>С тренером</dd>
                           <dt class="visually-hidden">Время:</dt>
-                          <dd>12 занятий</dd>
+                          <dd>180 занятий</dd>
                           <dt class="visually-hidden">Стоимость</dt>
                           <dd data-price="40000">40000</dd>
                         </dl>
@@ -328,10 +328,10 @@
       <section class="coach">
         <div class="container">
           <h2>Тренеры</h2>
-
-          <div class="coach__container">
+          <!-- обертка для выноса кнопок свайпера -->
+          <div class="coach__container coach-swiper">
             <!-- свайпер -->
-            <div class="coach__swiper coach-swiper swiper">
+            <div class="coach-swiper__content swiper">
               <!-- обертка свайпера -->
               <ul class="coach-swiper__wrapper swiper__wrapper">
 
@@ -547,15 +547,57 @@
 
             </div>
             <!-- навигация свайпера -->
-            <button class="swiper__button--prev" type="button">
+            <button class="coach-swiper__button coach-swiper__button--prev swiper__button--prev" type="button">
               <span class="visually-hidden">Предыдущий слайд.</span>
             </button>
-            <button class="swiper__button--next" type="button">
+            <button class="coach-swiper__button coach-swiper__button--next swiper__button--next" type="button">
               <span class="visually-hidden">Следующий слайд.</span>
             </button>
           </div>
         </div>
+      </section>
 
+      <section class="features">
+        <div class="container">
+          <h2>Наши преимущества</h2>
+        </div>
+        <ul class="features__list">
+          <li class="features__item features__item--accent">
+            <div class="features__card features-card features-card--accent">
+              <p class="features-card__title">Оборудование</p>
+              <p class="features-card__value"><b>100</b> тренажеров</p>
+              <p class="features-card__description">Современные тренажеры на все группы мышц</p>
+            </div>
+          </li>
+          <li class="features__item">
+            <div class="features__card features-card">
+              <p class="features-card__title">Площадь</p>
+              <p class="features-card__value"><b>900</b> кв/м</p>
+              <p class="features-card__description">Занимайтесь без очередей и&nbsp;толпучки</p>
+            </div>
+          </li>
+          <li class="features__item">
+            <div class="features__card features-card">
+              <p class="features-card__title">Собственная парковка</p>
+              <p class="features-card__value"><b>70</b> машин</p>
+              <p class="features-card__description">Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</p>
+            </div>
+          </li>
+          <li class="features__item">
+            <div class="features__card features-card">
+              <p class="features-card__title">Комфорт</p>
+              <p class="features-card__value"><b>350</b> мест</p>
+              <p class="features-card__description">Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+            </div>
+          </li>
+          <li class="features__item">
+            <div class="features__card features-card">
+              <p class="features-card__title">Тренерский опыт</p>
+              <p class="features-card__value"><b>5+</b> лет</p>
+              <p class="features-card__description">Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
+            </div>
+          </li>
+        </ul>
       </section>
 
     </main>
