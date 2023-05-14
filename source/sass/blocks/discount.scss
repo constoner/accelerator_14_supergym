@@ -1,0 +1,176 @@
+.discount {
+  padding: 100px 0;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 34px;
+    font-size: 54px;
+    line-height: 65px;
+    text-align: center;
+  }
+}
+
+// список-таблица акций
+.discount__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// карточка акций
+.discount__card {
+  $main-color: $color-resolution-blue;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 211px;
+  padding: 24px 35px;
+  color: $main-color;
+
+  // декоративная рамка карточки
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background: linear-gradient(160deg, #d10a42 0%, #00359f 100%);
+    mask-image: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 100% 100%'  fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='0' width='100%' height='100%' stroke='black' stroke-width='14' fill='none' /%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    mask-clip: stroke-box;
+    content: "";
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 3px;
+    font-family: $ff-default;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 150%;
+    letter-spacing: unset;
+    color: $main-color;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: 4px;
+    padding: 10px 0;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $main-color;
+    opacity: 1;
+    transition: opacity $trans-default;
+    user-select: none;
+
+    // декоративное подчеркивание ссылки
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 8px;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $main-color;
+      content: "";
+    }
+
+    // состояния ссылки
+    @include hover {
+      opacity: 0.6;
+    }
+
+    @include focus {
+      outline: 3px solid $color-default-black;
+    }
+
+    &:not(.crutch):active {
+      opacity: 0.2;
+    }
+  }
+}
+
+// выбираем акцентные ячейки
+.discount__item:nth-child(6n + 1),
+.discount__item:nth-child(6n + 5) {
+  grid-row: auto / span 2;
+
+  .discount__card {
+    $main-color: $color-default-white;
+
+    padding: 33px 45px;
+
+    color: $main-color;
+    background-color: $color-torch-red;
+
+    &::before {
+      display: none;
+    }
+
+    h3 {
+      width: 48.21%;
+      margin-bottom: -1px;
+      font-size: 28px;
+      line-height: 156%;
+      color: $main-color;
+    }
+
+    b {
+      display: block;
+      margin-top: -25px;
+      font-weight: 700;
+      font-size: 70px;
+      line-height: 156%;
+    }
+
+    p {
+      width: 48.21%;
+      font-size: 18px;
+      line-height: 140%;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 16px;
+      color: $main-color;
+
+      &::after {
+        background-color: $main-color;
+      }
+    }
+  }
+}
+
+.discount__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
