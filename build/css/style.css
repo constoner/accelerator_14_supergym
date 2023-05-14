@@ -3166,6 +3166,15 @@ button,
   line-height: 65px;
   text-align: center;
 }
+@media (max-width: 1199px) {
+  .discount h2 {
+    margin-top: -6px;
+    margin-bottom: 39px;
+    margin-right: 9px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
 
 .discount__list {
   display: -ms-grid;
@@ -3176,6 +3185,11 @@ button,
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+@media (max-width: 1199px) {
+  .discount__list {
+    gap: 30px;
+  }
 }
 
 .discount__card {
@@ -3220,6 +3234,7 @@ button,
   color: #1c3374;
 }
 .discount__card p {
+  width: 100%;
   margin: 0;
   margin-bottom: 15px;
   font-size: 16px;
@@ -3276,11 +3291,24 @@ button,
 .discount__item:nth-child(6n+5) {
   grid-row: auto/span 2;
 }
+@media (max-width: 1199px) {
+  .discount__item:nth-child(6n+1),
+.discount__item:nth-child(6n+5) {
+    grid-row: unset;
+    grid-column: 1/-1;
+  }
+}
 .discount__item:nth-child(6n+1) .discount__card,
 .discount__item:nth-child(6n+5) .discount__card {
   padding: 33px 45px;
   color: #ffffff;
   background-color: #ed0233;
+}
+@media (max-width: 1199px) {
+  .discount__item:nth-child(6n+1) .discount__card,
+.discount__item:nth-child(6n+5) .discount__card {
+    min-height: 462px;
+  }
 }
 .discount__item:nth-child(6n+1) .discount__card::before,
 .discount__item:nth-child(6n+5) .discount__card::before {
@@ -3293,6 +3321,12 @@ button,
   font-size: 28px;
   line-height: 156%;
   color: #ffffff;
+}
+@media (max-width: 1199px) {
+  .discount__item:nth-child(6n+1) .discount__card h3,
+.discount__item:nth-child(6n+5) .discount__card h3 {
+    width: 39%;
+  }
 }
 .discount__item:nth-child(6n+1) .discount__card b,
 .discount__item:nth-child(6n+5) .discount__card b {
@@ -3307,6 +3341,12 @@ button,
   width: 48.21%;
   font-size: 18px;
   line-height: 140%;
+}
+@media (max-width: 1199px) {
+  .discount__item:nth-child(6n+1) .discount__card p,
+.discount__item:nth-child(6n+5) .discount__card p {
+    width: 39%;
+  }
 }
 .discount__item:nth-child(6n+1) .discount__card a,
 .discount__item:nth-child(6n+5) .discount__card a {
@@ -3325,6 +3365,11 @@ button,
   right: 0;
   width: 50%;
   height: 100%;
+}
+@media (max-width: 1199px) {
+  .discount__image {
+    width: 58.85%;
+  }
 }
 .discount__image img {
   width: 100%;
