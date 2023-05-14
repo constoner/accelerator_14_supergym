@@ -8,6 +8,7 @@
 
   @include vp-767 {
     padding: 70px 0;
+    padding-bottom: 62px;
   }
 
   h2 {
@@ -20,7 +21,7 @@
 
     @include vp-1199 {
       margin-top: -9px;
-      margin-left: 0px;
+      margin-left: 0;
       margin-right: 22px;
       margin-bottom: 55px;
       font-size: 42px;
@@ -104,7 +105,7 @@
 .features__item:nth-child(2n + 5) {
   &::before {
     position: absolute;
-    left: 0px;
+    left: 0;
     top: -83px;
     display: block;
     width: 100%;
