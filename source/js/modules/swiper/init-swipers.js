@@ -1,6 +1,6 @@
 import Swiper from '../../vendor/swiper-bundle';
 
-const SWIPERS = ['swiper--coach', 'swiper--feedback'];
+// const SWIPERS = ['swiper--coach', 'swiper--feedback'];
 
 const CoachSlidesPerView = {
   MOBILE: 1,
@@ -65,14 +65,14 @@ const FEEDBACKSETTINGS = {
   },
 };
 
-const TABLET = {
-  coach: {class: 'swiper--coach', settings: COACHSETTINGS,},
-  feedback: {class: 'swiper--feedback', settings: FEEDBACKSETTINGS,},
-};
+// const TABLET = {
+//   coach: {class: 'swiper--coach', settings: COACHSETTINGS},
+//   feedback: {class: 'swiper--feedback', settings: FEEDBACKSETTINGS},
+// };
 
-const findClassIndex = (element) => {
-  element.classList.findIndex(item => item.includes('--coach'));
-}
+// const findClassIndex = (element) => {
+//   element.classList.findIndex((item) => item.includes('--coach'));
+// };
 
 
 export const initSwipers = () => {
@@ -85,7 +85,7 @@ export const initSwipers = () => {
 
   let swipersArray = [];
   if (swipers.length) {
-    const set = [{...SWIPERSETTINGS, ...COACHSETTINGS}, {...SWIPERSETTINGS, ...FEEDBACKSETTINGS}];
+    const set = [Object.assign(SWIPERSETTINGS, COACHSETTINGS), Object.assign(SWIPERSETTINGS, FEEDBACKSETTINGS)];
     swipers.forEach((item, index) => {
       swipersArray[index] = new Swiper(`.${item.classList[2]}`, set[index]);
 
