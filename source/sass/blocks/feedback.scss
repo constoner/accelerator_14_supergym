@@ -1,0 +1,138 @@
+.feedback {
+  padding: 17px 0 120px;
+
+  @include vp-1199 {
+    padding: 100px 0;
+    padding-top: 50px;
+  }
+
+  @include vp-767 {
+    padding: 70px 0;
+    padding-top: 35px;
+  }
+
+  h2 {
+    margin: 0;
+    margin-left: 9px;
+    margin-bottom: 37px;
+    font-size: 54px;
+    line-height: 65px;
+    text-align: center;
+
+    @include vp-1199 {
+      margin-top: -8px;
+      margin-left: 0;
+      margin-right: 5px;
+      margin-bottom: 40px;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      margin-top: -7px;
+      margin-left: 0;
+      margin-right: 3px;
+      margin-bottom: 43px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.feedback__swiper-content {
+  position: relative;
+  width: 720px;
+  margin: -80px auto; // марджины и падинги нужны для сохранения теней от карточек + необходимо внести кнопки внутрь контейнера
+  padding: 80px;
+
+  @include vp-1199 {
+    width: 726px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    max-width: 500px;
+    margin: -47px auto;
+    padding: 47px;
+  }
+}
+
+.feedback__swiper-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.feedback__swiper-slide {
+  height: 242px;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0 40px rgba($color-resolution-blue, 0.2);
+
+  @include vp-767 {
+    height: 335px;
+  }
+}
+
+.feedback-swiper__button {
+  position: absolute;
+  z-index: 100;
+  top: 46.1%;
+  display: block;
+  width: 27px;
+  height: 33px;
+  margin: 0;
+  padding: 0 5px;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='34' viewBox='0 0 18 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 33L0.999999 17L17 0.999998' stroke='%23AFAFAF'/%3E%3C/svg%3E%0A");
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  outline: 2px solid rgba($color-dark-gray, 0);
+  transition: outline $trans-default;
+  box-sizing: content-box;
+
+  @include vp-767 {
+    top: 46%;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background-size: 11px 20px;
+  }
+
+  @include focus {
+    outline: 2px solid $color-default-black;
+  }
+
+  @include hover {
+    outline: 2px solid rgba($color-dark-gray, 0.8);
+  }
+
+  &:not(.crutch):active {
+    opacity: 0.2;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  &--prev {
+    left: 13px;
+
+    @include vp-767 {
+      left: 4px;
+    }
+  }
+
+  &--next {
+    right: 13px;
+    transform: rotate(180deg);
+
+    @include vp-767 {
+      right: 4px;
+    }
+  }
+}

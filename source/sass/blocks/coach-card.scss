@@ -3,6 +3,7 @@
   filter: drop-shadow(0 0 35px rgba($color-gulf-blue, 0));
   will-change: filter;
   transition: filter $trans-default;
+  user-select: none;
 }
 
 // обертка для фиксации соотношения сторон

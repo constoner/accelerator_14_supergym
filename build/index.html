@@ -118,7 +118,8 @@
             <div class="video__cover" aria-hidden="true" data-video-cover data-video-cover-isShown=true>
               <picture>
                 <source type="image/webp" srcset="./img/video-cover.webp, ./img/video-cover@2x.webp 2x">
-                <img src="./img/video-cover.jpg" srcset="./img/video-cover@2x.jpg 2x" width="364" height="228" alt="" aria-hidden="true">
+                <img src="./img/video-cover.jpg" srcset="./img/video-cover@2x.jpg 2x" width="364" height="228" alt=""
+                  aria-hidden="true">
               </picture>
             </div>
             <button class="video__button" type="button" aria-label="Воспроизвести видео." title="Play" data-play-button
@@ -331,7 +332,7 @@
           <!-- обертка для выноса кнопок свайпера -->
           <div class="coach__container coach-swiper">
             <!-- свайпер -->
-            <div class="coach-swiper__content swiper">
+            <div class="coach-swiper__content swiper swiper--coach">
               <!-- обертка свайпера -->
               <ul class="coach-swiper__wrapper swiper__wrapper">
 
@@ -612,7 +613,8 @@
                 <div class="discount__image">
                   <picture>
                     <source type="image/webp" srcset="./img/discount.webp, ./img/discount@2x.webp 2x">
-                    <img src="./img/discount.jpg" srcset="./img/discount@2x.jpg 2x" width="280" height="462" loading="lazy"
+                    <img src="./img/discount.jpg" srcset="./img/discount@2x.jpg 2x" width="280" height="462"
+                      loading="lazy"
                       alt="Спортивная девушка в синих легинсах и топе в полоборота улыбается смотрит вверх. Ракурс камеры - снизу вверх.">
                   </picture>
                 </div>
@@ -643,6 +645,69 @@
             </li>
           </ul>
         </div>
+      </section>
+
+      <!-- отзывы -->
+      <section class="feedback">
+        <div class="container">
+          <h2>Отзывы</h2>
+        </div>
+
+        <!-- свайпер -->
+        <div class="feedback__swiper-content swiper swiper--feedback">
+          <ul class="feedback__swiper-wrapper swiper__wrapper">
+
+            <!-- слайд 1 -->
+            <li class="feedback__swiper-slide swiper__slide">
+              <div class="feedback__card feedback-card">
+                <div class="feedback-card__image">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/feedback/feedback-1.webp, ./img/feedback/feedback-1@2x.webp 2x">
+                    <img src="./img/feedback/feedback-1.jpg" srcset="./img/feedback/feedback-1@2x.jpg 2x" width="80"
+                      height="80" loading="lazy" alt="Аватар автора отзыва." style="object-position: 58% 19%;">
+                  </picture>
+                </div>
+                <p class="feedback-card__author">Анна Орлова</p>
+                <p class="feedback-card__text">&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что
+                  в&nbsp;клубе
+                  всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время
+                  нет очередей&raquo;
+                </p>
+              </div>
+            </li>
+
+            <!-- слайд 2 -->
+            <li class="feedback__swiper-slide swiper__slide">
+              <div class="feedback__card feedback-card">
+                <div class="feedback-card__image">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="./img/feedback/feedback-2.webp, ./img/feedback/feedback-2@2x.webp 2x">
+                    <img src="./img/feedback/feedback-2.jpg" srcset="./img/feedback/feedback-2@2x.jpg 2x" width="80"
+                      height="80" loading="lazy" alt="Аватар автора отзыва." style="object-position: 51% 14%;">
+                  </picture>
+                </div>
+                <p class="feedback-card__author">Константин Калинин</p>
+                <p class="feedback-card__text">
+                  Макет этого сайта просто какой-то ужас! В&nbsp;палитре 18&nbsp;цветов, из&nbsp;которых
+                  8&nbsp;&mdash; это оттенки синего. Бесконечные градиенты на&nbsp;всех элементах и&nbsp;постоянные
+                  перестроения сеток. Про переполнение и&nbsp;резину вообще молчу. Не&nbsp;понимаю, за&nbsp;что
+                  дизайнер так невзлюбил верстальщика
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- навигация свайпера -->
+          <button class="feedback-swiper__button feedback-swiper__button--prev swiper__button--prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд.</span>
+          </button>
+          <button class="feedback-swiper__button feedback-swiper__button--next swiper__button--next" type="button">
+            <span class="visually-hidden">Следующий слайд.</span>
+          </button>
+        </div>
+
       </section>
 
     </main>

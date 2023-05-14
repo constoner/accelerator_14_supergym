@@ -24,12 +24,14 @@ if (SLIDESPERVIEW * 2 <= slides.length) {
 
 export const initSwipers = () => {
 
-  const photoSwiper = new Swiper('.swiper', {
+  const coachSwiper = new Swiper('.swiper--coach', {
     wrapperClass: 'swiper__wrapper',
     slideClass: 'swiper__slide',
     direction: 'horizontal',
     slidesPerView: SLIDESPERVIEW,
     loop: isContinious,
+    grabCursor: true,
+    preventInteractionOnTransition: true,
 
     breakpoints: {
       320: {
@@ -57,17 +59,32 @@ export const initSwipers = () => {
     },
   });
 
-  return photoSwiper;
+  const feedbackSwiper = new Swiper('.swiper--feedback', {
+    wrapperClass: 'swiper__wrapper',
+    slideClass: 'swiper__slide',
+    direction: 'horizontal',
+    slidesPerView: 1,
+    spaceBetween: 100,
+    grabCursor: true,
+    preventInteractionOnTransition: true,
 
-  // const swiperReview = new Swiper('.swiper--coach', {
-  //   direction: 'horizontal',
-  //   loop: true,
-  //   centeredSlides: true,
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  // });
+    effect: 'creative',
+    creativeEffect: {
+      prev: {
+        // will set `translateZ(-400px)` on previous slides
+        translate: [0, 0, -400],
+      },
+      next: {
+        // will set `translateX(100%)` on next slides
+        translate: ['125%', 0, 0],
+      },
+    },
 
-  // return [swiperCoach, swiperReview];
+    navigation: {
+      nextEl: '.swiper__button--next',
+      prevEl: '.swiper__button--prev',
+    },
+  });
+
+  return [coachSwiper, feedbackSwiper];
 };

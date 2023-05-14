@@ -1,8 +1,16 @@
 .discount {
+  width: 100%;
+  margin: 0 auto;
   padding: 100px 0;
 
+  @include vp-1199 {
+    padding-bottom: 50px;
+  }
+
   @include vp-767 {
+    max-width: 500px;
     padding: 70px 0;
+    padding-bottom: 35px;
   }
 
   h2 {

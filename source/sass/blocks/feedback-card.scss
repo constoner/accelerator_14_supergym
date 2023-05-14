@@ -1,0 +1,116 @@
+.feedback-card {
+  display: grid;
+  grid-template-areas:
+    "image title"
+    "image text";
+  grid-template-columns: 80px 1fr;
+  column-gap: 28px;
+  width: 100%;
+  height: 100%;
+  padding: 55px 62px;
+  color: $color-default-white;
+  background-color: $color-resolution-blue;
+  user-select: none;
+
+  @include vp-1199 {
+    padding: 55px 65px;
+  }
+
+  @include vp-767 {
+    grid-template-areas:
+      "spare image title"
+      "text text text";
+    grid-template-columns: 1px 68px 1fr;
+    grid-template-rows: min-content;
+    column-gap: 15px;
+    row-gap: 14px;
+    padding: 40px 25px;
+    padding-bottom: 30px;
+  }
+}
+
+.feedback-card__author {
+  grid-area: title;
+  margin: 0;
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+
+  @include vp-767 {
+    align-self: center;
+    margin-bottom: 0;
+    line-height: 130%;
+    word-break: break-word;
+  }
+}
+
+.feedback-card__text {
+  grid-area: text;
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  line-height: 140%;
+  overflow: auto;
+
+  @include vp-767 {
+    text-align: center;
+  }
+
+  // стили для скроллбара
+  scrollbar-color: rgba(155, 155, 155, 0.8);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.8);
+    border-radius: 20px;
+    border: transparent;
+
+    &:hover {
+      background-color: rgba(155, 155, 155, 0.6);
+    }
+
+    &:active {
+      background-color: rgba(155, 155, 155, 0.4);
+    }
+  }
+}
+
+.feedback-card__image {
+  grid-area: image;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+  margin-top: 7px;
+  margin-right: 28px;
+  padding-bottom: 100%;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @include vp-767 {
+    width: 68px;
+    margin: 0;
+    justify-self: end;
+    align-self: top;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: none;
+  }
+}
