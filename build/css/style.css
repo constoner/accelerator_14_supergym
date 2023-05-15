@@ -4093,6 +4093,7 @@ button,
 @media (max-width: 1199px) {
   .contacts {
     padding: 70px 0;
+    padding-bottom: 68px;
     padding-left: 24px;
   }
 }
@@ -4271,19 +4272,27 @@ button,
 
 .footer {
   padding: 44px 0;
+  padding-bottom: 37px;
   color: #ffffff;
   background-color: #030a1a;
+}
+@media (max-width: 1199px) {
+  .footer {
+    padding-bottom: 39px;
+  }
 }
 
 .footer__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 200px 1fr 200px;
-  grid-template-columns: 200px 1fr 200px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-grid-columns: 17.24% 1fr 17.24%;
+  grid-template-columns: 17.24% 1fr 17.24%;
   margin-top: -3px;
+}
+@media (max-width: 1199px) {
+  .footer__container {
+    margin-top: 1px;
+  }
 }
 
 .footer__logo {
@@ -4291,6 +4300,12 @@ button,
   display: block;
   width: 87px;
   margin-top: 10px;
+}
+@media (max-width: 1199px) {
+  .footer__logo {
+    width: 81px;
+    margin-top: 3px;
+  }
 }
 .footer__logo img {
   width: 100%;
@@ -4300,7 +4315,7 @@ button,
 }
 .footer__logo::before {
   position: absolute;
-  top: -5px;
+  top: -8px;
   bottom: -5px;
   left: -10px;
   right: -10px;
@@ -4311,6 +4326,11 @@ button,
   -webkit-transition: opacity 0.2s ease-out;
   -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
+}
+@media (max-width: 1199px) {
+  .footer__logo::before {
+    bottom: 2px;
+  }
 }
 @media (hover: hover) {
   .footer__logo:hover:not(.focus-visible)::before {
@@ -4345,11 +4365,16 @@ button,
 .footer__link {
   position: relative;
   display: block;
-  margin: 0 10px;
+  margin: 4px 10px;
   padding: 0 10px;
   font-size: 14px;
   line-height: 16px;
   color: inherit;
+}
+@media (max-width: 1199px) {
+  .footer__link {
+    margin: 4px 5px;
+  }
 }
 .footer__link::before {
   position: absolute;
@@ -4381,9 +4406,12 @@ button,
   margin: 0;
   -ms-grid-column-align: end;
       justify-self: end;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  margin-right: 1px;
+}
+@media (max-width: 1199px) {
+  .footer__social-list {
+    margin-right: -6px;
+  }
 }
 
 .social-list {
@@ -4392,11 +4420,15 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: 0;
   list-style-type: none;
 }
 
 .social-list__item {
+  margin-bottom: 5px;
   margin-left: 11px;
 }
 

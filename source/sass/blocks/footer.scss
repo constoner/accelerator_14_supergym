@@ -1,14 +1,22 @@
 .footer {
   padding: 44px 0;
+  padding-bottom: 37px;
   color: $color-default-white;
   background-color: $color-black-russian;
+
+  @include vp-1199 {
+    padding-bottom: 39px;
+  }
 }
 
 .footer__container {
   display: grid;
-  grid-template-columns: 200px 1fr 200px;
-  align-items: center;
+  grid-template-columns: 17.24% 1fr 17.24%;
   margin-top: -3px;
+
+  @include vp-1199 {
+    margin-top: 1px;
+  }
 }
 
 .footer__logo {
@@ -16,6 +24,11 @@
   display: block;
   width: 87px;
   margin-top: 10px;
+
+  @include vp-1199 {
+    width: 81px;
+    margin-top: 3px;
+  }
 
   img {
     width: 100%;
@@ -25,7 +38,7 @@
 
   &::before {
     position: absolute;
-    top: -5px;
+    top: -8px;
     bottom: -5px;
     left: -10px;
     right: -10px;
@@ -34,6 +47,10 @@
     content: "";
     opacity: 0;
     transition: opacity $trans-default;
+
+    @include vp-1199 {
+      bottom: 2px;
+    }
   }
 
   @include hover {
@@ -65,11 +82,15 @@
 .footer__link {
   position: relative;
   display: block;
-  margin: 0 10px;
+  margin: 4px 10px;
   padding: 0 10px;
   font-size: 14px;
   line-height: 16px;
   color: inherit;
+
+  @include vp-1199 {
+    margin: 4px 5px;
+  }
 
   &::before {
     position: absolute;
@@ -102,5 +123,9 @@
 .footer__social-list {
   margin: 0;
   justify-self: end;
-  align-self: center;
+  margin-right: 1px;
+
+  @include vp-1199 {
+    margin-right: -6px;
+  }
 }
