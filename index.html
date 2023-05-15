@@ -685,15 +685,15 @@
                     <source type="image/webp"
                       srcset="./img/feedback/feedback-2.webp, ./img/feedback/feedback-2@2x.webp 2x">
                     <img src="./img/feedback/feedback-2.jpg" srcset="./img/feedback/feedback-2@2x.jpg 2x" width="80"
-                      height="80" loading="lazy" alt="Аватар автора отзыва." style="object-position: 51% 14%;">
+                      height="80" loading="lazy" alt="Аватар автора отзыва." style="object-position: 49% 15%;">
                   </picture>
                 </div>
                 <p class="feedback-card__author">Константин Калинин</p>
                 <p class="feedback-card__text">
-                  Макет этого сайта просто какой-то ужас! В&nbsp;палитре 18&nbsp;цветов, из&nbsp;которых
-                  8&nbsp;&mdash; это оттенки синего. Бесконечные градиенты на&nbsp;всех элементах и&nbsp;постоянные
+                  &laquo;Макет этого сайта просто какой-то ужас! В&nbsp;палитре 19&nbsp;цветов, из&nbsp;которых
+                  9&nbsp;&mdash; это оттенки синего. Бесконечные градиенты на&nbsp;всех элементах и&nbsp;постоянные
                   перестроения сеток. Про переполнение и&nbsp;резину вообще молчу. Не&nbsp;понимаю, за&nbsp;что
-                  дизайнер так невзлюбил верстальщика
+                  дизайнер так невзлюбил верстальщика&raquo;
                 </p>
               </div>
             </li>
@@ -710,6 +710,60 @@
 
       </section>
 
+      <div class="section-container">
+
+        <!-- секция форма -->
+        <section class="form" data-form-validate data-callback="base">
+          <div class="container">
+            <div class="inner-container">
+              <h2>Бесплатное занятие</h2>
+
+              <!-- форма -->
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <div class="form__validation" data-validate-type="text" data-limitation="name" data-required>
+                  <label class="visually-hidden" for="name">Ваше имя:</label>
+                  <input type="text" name="name" id="name" spellcheck="false" autocomplete="off" placeholder="Имя"
+                    required pattern="[a-zA-Zа-яёА-ЯЁ\-]{1,30}" aria-invalid="true">
+                </div>
+                <div class="form__validation" data-validate-type="phone" data-required>
+                  <label class="visually-hidden" for="phone">Ваш контактный телефон:</label>
+                  <input type="tel" name="phone" id="phone" placeholder="Телефон" autocomplete="off" required
+                    aria-invalid="true">
+                </div>
+
+                <button type="submit">отправить</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- контакты -->
+        <section class="contacts">
+          <div class="container">
+            <div class="inner-container">
+              <h2>Контакты</h2>
+              <dl class="contacts__list">
+                <div class="contacts__wrapper">
+                  <dt>Адрес:</dt>
+                  <dd>г. Омск, ул.&nbsp;60&nbsp;лет Октября, 7</dd>
+                </div>
+                <div class="contacts__wrapper">
+                  <dt>График работы:</dt>
+                  <dd>Пн-Вс: с 8:00 до 22:00</dd>
+                </div>
+                <div class="contacts__wrapper">
+                  <dt>Телефон:</dt>
+                  <dd><a href="tel:88005555555">8-800-555-55-55</a></dd>
+                </div>
+                <div class="contacts__wrapper">
+                  <dt>Email:</dt>
+                  <dd><a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <!-- футер -->
