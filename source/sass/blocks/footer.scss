@@ -7,8 +7,14 @@
   @include vp-1199 {
     padding-bottom: 39px;
   }
+
+  @include vp-767 {
+    padding: 50px 0;
+    padding-bottom: 40px;
+  }
 }
 
+// основная сетка футера
 .footer__container {
   display: grid;
   grid-template-columns: 17.24% 1fr 17.24%;
@@ -17,8 +23,16 @@
   @include vp-1199 {
     margin-top: 1px;
   }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 1px;
+  }
 }
 
+// логотип
 .footer__logo {
   position: relative;
   display: block;
@@ -30,12 +44,20 @@
     margin-top: 3px;
   }
 
-  img {
+  @include vp-767 {
+    width: 67px;
+    margin-top: 1px;
+  }
+
+  // изображение в контейнере
+  img,
+  svg {
     width: 100%;
     height: auto;
     object-fit: cover;
   }
 
+  // декоративная рамка для ховера
   &::before {
     position: absolute;
     top: -8px;
@@ -53,6 +75,7 @@
     }
   }
 
+  // состояния логотипа
   @include hover {
     &::before {
       opacity: 1;
@@ -68,6 +91,7 @@
   }
 }
 
+// ссылки в футере
 .footer__list {
   display: flex;
   flex-wrap: wrap;
@@ -77,6 +101,23 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include vp-767 {
+    display: block;
+    margin-top: -28px;
+    margin-left: -11px;
+    column-count: auto;
+    column-width: 125px;
+    column-gap: 31px;
+
+    // хак - пустой элемент списка, чтобы логотиппопал в навигацию
+    &::before {
+      display: list-item;
+      width: 100%;
+      height: 39px;
+      content: "";
+    }
+  }
 }
 
 .footer__link {
@@ -92,6 +133,15 @@
     margin: 4px 5px;
   }
 
+  @include vp-767 {
+    width: fit-content;
+    margin: 2px 0;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  // декоративная рамка для ховера
   &::before {
     position: absolute;
     top: -5px;
@@ -120,12 +170,22 @@
   }
 }
 
+// иконки соцсетей
 .footer__social-list {
   margin: 0;
   justify-self: end;
   margin-right: 1px;
+  justify-content: flex-end;
 
   @include vp-1199 {
     margin-right: -6px;
+  }
+
+  @include vp-767 {
+    justify-self: start;
+    justify-content: center;
+    margin-top: 13px;
+    margin-right: 0;
+    margin-left: -8px;
   }
 }
