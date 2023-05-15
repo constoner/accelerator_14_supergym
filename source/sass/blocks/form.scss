@@ -1,8 +1,11 @@
 .form {
   padding: 56px 0 70px;
-  padding-right: 67px;
   color: $color-default-white;
   background-color: $color-sapphire;
+
+  @include vp-1199 {
+    padding: 70px 0;
+  }
 
   h2 {
     margin: 0;
@@ -11,12 +14,36 @@
     font-size: 54px;
     line-height: 156%;
     color: inherit;
+
+    @include vp-1199 {
+      margin-top: -9px;
+      margin-bottom: 34px;
+      margin-left: 1px;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 50px;
+    }
+  }
+
+  .form__container {
+    @include vp-1199 {
+      width: fit-content;
+      margin: 0 auto;
+      padding-right: 30px;
+    }
   }
 
   form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    width: 410px;
+
+    @include vp-1199 {
+      column-gap: 60px;
+      row-gap: 30px;
+      width: 472px;
+    }
   }
 
   // текстовые инпуты
@@ -130,4 +157,3 @@
 .form .is-valid > input {
   background-color: rgba($color-kelly-green, 0.4);
 }
-

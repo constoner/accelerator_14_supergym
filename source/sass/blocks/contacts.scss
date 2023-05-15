@@ -2,11 +2,31 @@
   padding: 56px 0 70px;
   padding-left: 17px;
 
+  @include vp-1199 {
+    padding: 70px 0;
+  }
+
   h2 {
     margin: 0;
     margin-bottom: 38px;
     font-size: 54px;
     line-height: 65px;
+
+    @include vp-1199 {
+      margin-top: -8px;
+      margin-bottom: 32px;
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 50px;
+    }
+  }
+}
+
+.contacts__container {
+  @include vp-1199 {
+    width: fit-content;
+    margin: 0 auto;
+    padding-left: 24px;
   }
 }
 
@@ -21,6 +41,13 @@
   margin-right: -4px;
   margin-bottom: -5px;
   padding: 0;
+
+  @include vp-1199 {
+    // width: 500px;
+    width: fit-content;
+    margin-left: 0;
+    column-gap: 96px
+  }
 
   &::before {
     position: absolute;
@@ -50,6 +77,11 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
+
+    @include vp-1199 {
+      margin-bottom: 6px;
+      font-size: 20px;
+    }
   }
 
   dd {
@@ -58,6 +90,11 @@
     padding: 0;
     font-size: 14px;
     line-height: 21px;
+
+    @include vp-1199 {
+      font-size: 18px;
+      line-height: 152.34%;
+    }
   }
 
   a {

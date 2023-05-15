@@ -49,6 +49,7 @@
   box-shadow: 0 0 0 1px $color-light-slate-grey inset;
 
   @include vp-1199 {
+    grid-template-columns: 1fr;
     box-shadow: none;
   }
 }
