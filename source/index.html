@@ -326,7 +326,7 @@
       </section>
 
       <!-- тренеры -->
-      <section class="coach">
+      <section class="coach" id="coach">
         <div class="container">
           <h2>Тренеры</h2>
           <!-- обертка для выноса кнопок свайпера -->
@@ -604,7 +604,7 @@
       </section>
 
       <!-- акции -->
-      <section class="discount">
+      <section class="discount" id="discount">
         <div class="container">
           <h2>Акции</h2>
           <ul class="discount__list">
@@ -767,9 +767,66 @@
     </main>
 
     <!-- футер -->
-    <footer style="padding: 20px; color: #FFFFFF; background-color: #030A1A;">
+    <footer class="footer">
       <div class="container">
-        <img src="./img/svg/logo-large.svg" width="122" height="44" alt="Логотип SUPERGYM.">
+        <div class="footer__container">
+
+          <!-- лого -->
+          <a class="footer__logo" href="./index.html">
+            <img src="./img/svg/logo-large.svg" width="88" height="32" alt="Логотип Supergym.">
+          </a>
+
+          <!-- навигация -->
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="./services.html">Услуги</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#membership">Абонементы</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#discount">Акции</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#coach">Тренеры</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="./schedule.html">Расписание</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- соцсети -->
+          <ul class="footer__social-list social-list">
+            <li class="social-list__item">
+              <a class="social-list__link" href="#!" aria-label="Мы Вконтакте.">
+                <svg class="social-list__icon" width="25" height="25" fill="currentColor" aria-hidden="true"
+                  focusable="false">
+                  <use href="./img/sprite.svg#icon-social-vk" />
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#!" aria-label="Мы в Одноклассниках.">
+                <svg class="social-list__icon" width="25" height="25" fill="currentColor" aria-hidden="true"
+                  focusable="false">
+                  <use href="./img/sprite.svg#icon-social-ok" />
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#!" aria-label="Мы на Реддит.">
+                <svg class="social-list__icon" width="25" height="25" fill="currentColor" aria-hidden="true"
+                  focusable="false">
+                  <use href="./img/sprite.svg#icon-social-reddit" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </div>

@@ -1,0 +1,106 @@
+.footer {
+  padding: 44px 0;
+  color: $color-default-white;
+  background-color: $color-black-russian;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  align-items: center;
+  margin-top: -3px;
+}
+
+.footer__logo {
+  position: relative;
+  display: block;
+  width: 87px;
+  margin-top: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &::before {
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -10px;
+    right: -10px;
+    display: block;
+    border: 2px solid $color-default-white;
+    content: "";
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  @include hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @include focus {
+    outline: 2px solid $color-light-slate-grey;
+  }
+
+  &:not(.crutch):active {
+    opacity: 0.2;
+  }
+}
+
+.footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer__link {
+  position: relative;
+  display: block;
+  margin: 0 10px;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 16px;
+  color: inherit;
+
+  &::before {
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    display: block;
+    border: 2px solid $color-default-white;
+    content: "";
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  @include hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @include focus {
+    outline: 2px solid $color-light-slate-grey;
+  }
+
+  &:not(.crutch):active {
+    opacity: 0.2;
+  }
+}
+
+.footer__social-list {
+  margin: 0;
+  justify-self: end;
+  align-self: center;
+}

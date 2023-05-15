@@ -1,4 +1,5 @@
 .contacts {
+  position: relative;
   padding: 56px 0 70px;
   padding-left: 17px;
 
@@ -9,6 +10,17 @@
 
   @include vp-767 {
     padding: 70px 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $color-light-slate-grey;
+    content: "";
   }
 
   h2 {
