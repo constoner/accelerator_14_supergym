@@ -2658,45 +2658,62 @@ button,
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 19.5%;
-  padding-bottom: 18px;
   background-color: rgba(16, 38, 84, 0.89);
   color: #ffffff;
-  overflow: auto;
   opacity: 0;
   will-change: opacity;
   -webkit-transition: opacity 0.2s ease-out;
   -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
+}
+.coach-card__info-wrapper::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#102654), color-stop(50%), to(rgba(16, 38, 84, 0)));
+  background-image: -o-linear-gradient(bottom, #102654, 50%, rgba(16, 38, 84, 0));
+  background-image: linear-gradient(to top, #102654, 50%, rgba(16, 38, 84, 0));
+  content: "";
+}
+
+.coach-card__scrolable {
+  width: 100%;
+  height: 100%;
+  padding: 19.5%;
+  padding-bottom: 18px;
+  overflow: auto;
   scrollbar-color: rgba(155, 155, 155, 0.8);
   scrollbar-width: thin;
 }
 @media (max-width: 767px) {
-  .coach-card__info-wrapper {
+  .coach-card__scrolable {
     padding: 21.92%;
   }
 }
 @media (max-width: 767px) {
-  .coach-card__info-wrapper {
+  .coach-card__scrolable {
     padding: 19% 13%;
     padding-bottom: 15%;
   }
 }
-.coach-card__info-wrapper::-webkit-scrollbar {
+.coach-card__scrolable::-webkit-scrollbar {
   width: 4px;
 }
-.coach-card__info-wrapper::-webkit-scrollbar-track {
+.coach-card__scrolable::-webkit-scrollbar-track {
   background: transparent;
 }
-.coach-card__info-wrapper::-webkit-scrollbar-thumb {
+.coach-card__scrolable::-webkit-scrollbar-thumb {
   background-color: rgba(155, 155, 155, 0.8);
   border-radius: 20px;
   border: transparent;
 }
-.coach-card__info-wrapper::-webkit-scrollbar-thumb:hover {
+.coach-card__scrolable::-webkit-scrollbar-thumb:hover {
   background-color: rgba(155, 155, 155, 0.6);
 }
-.coach-card__info-wrapper::-webkit-scrollbar-thumb:active {
+.coach-card__scrolable::-webkit-scrollbar-thumb:active {
   background-color: rgba(155, 155, 155, 0.4);
 }
 
