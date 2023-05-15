@@ -91,4 +91,3 @@ export const initSwipers = () => {
   }
   return swipersArray;
 };
-

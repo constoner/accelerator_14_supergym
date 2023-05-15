@@ -4070,7 +4070,7 @@ button,
 .form button.focus-visible:focus {
   outline: 3px solid #000000;
 }
-.form button:not(.bicycle:hover):active {
+.form button:not(.crutch):active {
   opacity: 0.2;
 }
 .form button:disabled, .form button.disabled {
