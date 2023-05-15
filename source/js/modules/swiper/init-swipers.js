@@ -82,13 +82,11 @@ export const initSwipers = () => {
 
   // return [coachSwiper, feedbackSwiper];
 
-
   let swipersArray = [];
   if (swipers.length) {
-    const set = [Object.assign(SWIPERSETTINGS, COACHSETTINGS), Object.assign(SWIPERSETTINGS, FEEDBACKSETTINGS)];
+    const set = [Object.assign(Object.assign({}, SWIPERSETTINGS), COACHSETTINGS), Object.assign(Object.assign({}, SWIPERSETTINGS), FEEDBACKSETTINGS)];
     swipers.forEach((item, index) => {
       swipersArray[index] = new Swiper(`.${item.classList[2]}`, set[index]);
-
     });
   }
   return swipersArray;

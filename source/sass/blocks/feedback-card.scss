@@ -1,4 +1,5 @@
 .feedback-card {
+  position: relative;
   display: grid;
   grid-template-areas:
     "image title"
@@ -8,12 +9,16 @@
   width: 100%;
   height: 100%;
   padding: 55px 62px;
+  padding-right: 57px; // для скроллбара
+  padding-bottom: 25px;
   color: $color-default-white;
   background-color: $color-resolution-blue;
   user-select: none;
 
   @include vp-1199 {
     padding: 55px 65px;
+    padding-right: 60px; // для скроллбара
+    padding-bottom: 25px;
   }
 
   @include vp-767 {
@@ -25,7 +30,31 @@
     column-gap: 15px;
     row-gap: 14px;
     padding: 40px 25px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
+    padding-right: 20px; // для скроллбара
+  }
+
+  // градиент для скрытия длинного отзыва
+  &::after {
+    position: absolute;
+    z-index: 5;
+    bottom: 25px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-image: linear-gradient(
+      to top,
+      rgba($color-resolution-blue, 1),
+      80%,
+      rgba($color-resolution-blue, 0)
+    );
+    content: "";
+
+    @include vp-767 {
+      bottom: 15px;
+      height: 25px;
+    }
   }
 }
 
@@ -49,11 +78,14 @@
   grid-area: text;
   height: 100%;
   margin: 0;
+  padding-right: 5px; // для скроллбара
+  padding-bottom: 30px;
   font-size: 16px;
   line-height: 140%;
   overflow: auto;
 
   @include vp-767 {
+    padding-bottom: 15px;
     text-align: center;
   }
 
