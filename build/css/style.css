@@ -919,6 +919,21 @@ button,
   }
 }
 
+.section-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-shadow: 0 0 0 1px #74819c inset;
+          box-shadow: 0 0 0 1px #74819c inset;
+}
+@media (max-width: 1199px) {
+  .section-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -3764,6 +3779,9 @@ button,
     -ms-grid-column: 1;
   }
 }
+.feedback-card__text.focus-visible:focus {
+  outline: 3px solid #000000;
+}
 @media (max-width: 767px) {
   .feedback-card__text {
     padding-bottom: 15px;
@@ -3854,4 +3872,258 @@ button,
   max-width: 100%;
   -o-object-fit: none;
      object-fit: none;
+}
+
+.form {
+  padding: 56px 0 70px;
+  padding-right: 67px;
+  color: #ffffff;
+  background-color: #102654;
+}
+.form h2 {
+  margin: 0;
+  margin-bottom: 19px;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 156%;
+  color: inherit;
+}
+.form form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.form label + input {
+  width: 100%;
+  padding: 4px 0;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: rgba(116, 129, 156, 0);
+  border: none;
+  border-bottom: 1px solid #74819c;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+.form label + input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.form label + input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.form label + input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.form label + input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.form label + input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.form label + input.focus-visible:focus {
+  background-color: rgba(116, 129, 156, 0.2);
+  outline: none;
+}
+.form label + input:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.form__validation {
+  position: relative;
+}
+.form__validation::before {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  content: "";
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+@media (hover: hover) {
+  .form__validation:hover:not(.focus-visible)::before {
+    opacity: 1;
+  }
+}
+
+.form button {
+  grid-column: 1/-1;
+  min-height: 52px;
+  margin: 0;
+  margin-top: -2px;
+  padding: 16px;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+@media (max-width: 767px) {
+  .form button {
+    margin-top: 7px;
+  }
+}
+@media (hover: hover) {
+  .form button:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+}
+.form button.focus-visible:focus {
+  outline: 3px solid #000000;
+}
+.form button:not(.bicycle:hover):active {
+  opacity: 0.2;
+}
+.form button:disabled, .form button.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.form .is-invalid > input {
+  background-color: rgba(174, 16, 58, 0.4);
+}
+
+.form .is-valid > input {
+  background-color: rgba(58, 174, 16, 0.4);
+}
+
+.contacts {
+  padding: 56px 0 70px;
+  padding-left: 17px;
+}
+.contacts h2 {
+  margin: 0;
+  margin-bottom: 38px;
+  font-size: 54px;
+  line-height: 65px;
+}
+
+.contacts__list {
+  position: relative;
+  display: block;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-width: auto;
+     -moz-column-width: auto;
+          column-width: auto;
+  -webkit-column-gap: 120px;
+     -moz-column-gap: 120px;
+          column-gap: 120px;
+  margin: 0;
+  margin-left: 4px;
+  margin-right: -4px;
+  margin-bottom: -5px;
+  padding: 0;
+}
+.contacts__list::before {
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 90%;
+  top: 6px;
+  left: 50%;
+  background-color: #74819c;
+  content: "";
+}
+
+.contacts__wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 18px;
+}
+.contacts__wrapper:nth-child(2n) {
+  margin-bottom: 0;
+}
+.contacts__wrapper dt {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  margin-bottom: 3px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+}
+.contacts__wrapper dd {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+.contacts__wrapper a {
+  position: relative;
+}
+.contacts__wrapper a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(16, 38, 84, 0.8);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  content: "";
+}
+@media (hover: hover) {
+  .contacts__wrapper a:hover:not(.focus-visible)::after {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+.contacts__wrapper a.focus-visible:focus {
+  outline: 3px solid #000000;
+}
+.contacts__wrapper a:active {
+  opacity: 0.6;
 }

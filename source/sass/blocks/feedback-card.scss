@@ -84,6 +84,10 @@
   line-height: 140%;
   overflow: auto;
 
+  @include focus {
+    outline: 3px solid $color-default-black;
+  }
+
   @include vp-767 {
     padding-bottom: 15px;
     text-align: center;

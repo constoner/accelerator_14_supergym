@@ -1,0 +1,133 @@
+.form {
+  padding: 56px 0 70px;
+  padding-right: 67px;
+  color: $color-default-white;
+  background-color: $color-sapphire;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 19px;
+    font-weight: 800;
+    font-size: 54px;
+    line-height: 156%;
+    color: inherit;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  // текстовые инпуты
+  & label + input {
+    width: 100%;
+    padding: 4px 0;
+    font-family: $ff-default;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-default-white;
+    background-color: rgba($color-light-slate-grey, 0);
+    border: none;
+    border-bottom: 1px solid $color-light-slate-grey;
+    box-shadow: none;
+    transition: background-color $trans-default;
+
+    &::placeholder {
+      color: rgba($color-default-white, 0.7);
+    }
+
+    @include focus {
+      background-color: rgba($color-light-slate-grey, 0.2);
+      outline: none;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
+}
+
+// стили для состояний инпутов
+.form__validation {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $color-default-white;
+    content: "";
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  @include hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+// кнопка отправки формы
+.form button {
+  grid-column: 1/-1;
+  min-height: 52px;
+  margin: 0;
+  margin-top: -2px;
+  padding: 16px;
+  font-family: $ff-default;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  background-color: transparent;
+  border: 3px solid $color-default-white;
+  cursor: pointer;
+  user-select: none;
+  opacity: 1;
+  transition: opacity $trans-default;
+
+  @include vp-767 {
+    margin-top: 7px;
+  }
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  @include focus {
+    outline: 3px solid $color-default-black;
+  }
+
+  &:not(.bicycle:hover):active {
+    opacity: 0.2;
+  }
+
+  &:disabled,
+  &.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+// стили для валидации
+
+.form .is-invalid > input {
+  background-color: rgba($color-cardinal, 0.4);
+}
+
+.form .is-valid > input {
+  background-color: rgba($color-kelly-green, 0.4);
+}
+
