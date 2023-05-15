@@ -54,6 +54,19 @@
   }
 }
 
+.inner-container {
+  @include vp-1199 {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
 .visually-hidden {
   position: absolute;
 

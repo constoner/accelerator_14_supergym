@@ -5,6 +5,11 @@
 
   @include vp-1199 {
     padding: 70px 0;
+    padding-right: 30px;
+  }
+
+  @include vp-767 {
+    padding: 70px 0;
   }
 
   h2 {
@@ -23,13 +28,14 @@
       font-size: 42px;
       line-height: 50px;
     }
-  }
 
-  .form__container {
-    @include vp-1199 {
-      width: fit-content;
-      margin: 0 auto;
-      padding-right: 30px;
+    @include vp-767 {
+      margin-top: -7px;
+      margin-bottom: 36px;
+      margin-left: 0;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 38px;
     }
   }
 
@@ -43,6 +49,12 @@
       column-gap: 60px;
       row-gap: 30px;
       width: 472px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      row-gap: 34px;
+      width: 100%;
     }
   }
 
@@ -126,7 +138,8 @@
   transition: opacity $trans-default;
 
   @include vp-767 {
-    margin-top: 7px;
+    grid-column: unset;
+    margin-top: 5px;
   }
 
   @include hover {

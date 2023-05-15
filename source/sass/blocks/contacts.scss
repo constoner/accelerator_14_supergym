@@ -4,6 +4,11 @@
 
   @include vp-1199 {
     padding: 70px 0;
+    padding-left: 24px;
+  }
+
+  @include vp-767 {
+    padding: 70px 0;
   }
 
   h2 {
@@ -15,18 +20,16 @@
     @include vp-1199 {
       margin-top: -8px;
       margin-bottom: 32px;
-      font-weight: 600;
       font-size: 42px;
       line-height: 50px;
     }
-  }
-}
 
-.contacts__container {
-  @include vp-1199 {
-    width: fit-content;
-    margin: 0 auto;
-    padding-left: 24px;
+    @include vp-767 {
+      margin-top: -8px;
+      margin-bottom: 35px;
+      font-size: 32px;
+      line-height: 38px;
+    }
   }
 }
 
@@ -43,10 +46,13 @@
   padding: 0;
 
   @include vp-1199 {
-    // width: 500px;
     width: fit-content;
     margin-left: 0;
-    column-gap: 96px
+    column-gap: 96px;
+  }
+
+  @include vp-767 {
+    columns: unset;
   }
 
   &::before {
@@ -58,6 +64,10 @@
     left: 50%;
     background-color: $color-light-slate-grey;
     content: "";
+
+    @include vp-767 {
+      display: none;
+    }
   }
 }
 
@@ -67,6 +77,10 @@
 
   &:nth-child(2n) {
     margin-bottom: 0;
+
+    @include vp-767 {
+      margin-bottom: 18px;
+    }
   }
 
   dt {
