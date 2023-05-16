@@ -1,6 +1,9 @@
 import Swiper from '../../vendor/swiper-bundle';
+import debounce from '../../utils/debounce';
 
-// const SWIPERS = ['swiper--coach', 'swiper--feedback'];
+
+const swipers = document.querySelectorAll('.swiper'); // коллекция нодов свайперов
+const coachSlides = document.querySelector('.swiper--coach').querySelectorAll('.swiper__slide'); // количество слайдов с тренерами
 
 const CoachSlidesPerView = {
   MOBILE: 1,
@@ -8,29 +11,8 @@ const CoachSlidesPerView = {
   DESKTOP: 4,
 };
 
-const swipers = document.querySelectorAll('.swiper');
-const coachSlides = document.querySelector('.swiper--coach').querySelectorAll('.swiper__slide');
-const width = window.innerWidth;
-
-// 1 настройки свайпера с карточками тренеров
-// 1.1 - определение количества карточек в зависимости от размера экрана;
-
-let SLIDESPERVIEW;
-if (width < 768) {
-  SLIDESPERVIEW = CoachSlidesPerView.MOBILE;
-} else if (width < 1200) {
-  SLIDESPERVIEW = CoachSlidesPerView.TABLET;
-} else {
-  SLIDESPERVIEW = CoachSlidesPerView.DESKTOP;
-}
-
-// 1.2 - включение бесконечной прокрутки при достаточном количестве карточек;
-let isContinious = false;
-if (SLIDESPERVIEW * 2 <= coachSlides.length) {
-  isContinious = true;
-}
-
-let SWIPERSETTINGS = {
+// базовые настройки свайпера
+const SWIPERSETTINGS = {
   wrapperClass: 'swiper__wrapper',
   slideClass: 'swiper__slide',
   direction: 'horizontal',
@@ -42,9 +24,11 @@ let SWIPERSETTINGS = {
   },
 };
 
+// настройки свайпера тренеров
 const COACHSETTINGS = {
-  slidesPerView: SLIDESPERVIEW,
-  loop: isContinious,
+  slidesPerView: getSlidesNumber(CoachSlidesPerView),
+  loop: getSwiperContinious(CoachSlidesPerView),
+  updateOnWindowResize: true,
   breakpoints: {
     320: {spaceBetween: 20},
     768: {spaceBetween: 30},
@@ -55,39 +39,57 @@ const COACHSETTINGS = {
   },
 };
 
+// настройки свайпера отзывов
 const FEEDBACKSETTINGS = {
   slidesPerView: 1,
   spaceBetween: 100,
-  effect: 'creative',
-  creativeEffect: {
-    prev: {translate: [0, 0, -400]},
-    next: {translate: ['125%', 0, 0]},
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
   },
 };
 
-// const TABLET = {
-//   coach: {class: 'swiper--coach', settings: COACHSETTINGS},
-//   feedback: {class: 'swiper--feedback', settings: FEEDBACKSETTINGS},
-// };
+// определение количества слайдов в зависимости от размеров экрана
+function getSlidesNumber(settings) {
+  const width = window.innerWidth;
+  let SLIDESPERVIEW;
+  if (width < 768) {
+    SLIDESPERVIEW = settings.MOBILE;
+  } else if (width < 1200) {
+    SLIDESPERVIEW = settings.TABLET;
+  } else {
+    SLIDESPERVIEW = settings.DESKTOP;
+  }
+  return SLIDESPERVIEW;
+}
 
-// const findClassIndex = (element) => {
-//   element.classList.findIndex((item) => item.includes('--coach'));
-// };
+// включекние бесконечной прокрутки при достаточном количестве слайдов
+function getSwiperContinious(settings) {
+  let isContinious = false;
+  if (getSlidesNumber(settings) * 2 <= coachSlides.length) {
+    isContinious = true;
+  }
+  return isContinious;
+}
 
+// объединение параметров свайперов
+function getParameters() {
+  return [Object.assign(Object.assign({}, SWIPERSETTINGS), COACHSETTINGS), Object.assign(Object.assign({}, SWIPERSETTINGS), FEEDBACKSETTINGS)];
+}
 
 export const initSwipers = () => {
-
-  // const coachSwiper = new Swiper('.swiper--coach', {...SWIPERSETTINGS, ...COACHSETTINGS});
-  // const feedbackSwiper = new Swiper('.swiper--feedback', {...SWIPERSETTINGS, ...FEEDBACKSETTINGS});
-
-  // return [coachSwiper, feedbackSwiper];
-
-  let swipersArray = [];
+  const set = getParameters(); // массив с параметрами
+  const swipersArray = [];
   if (swipers.length) {
-    const set = [Object.assign(Object.assign({}, SWIPERSETTINGS), COACHSETTINGS), Object.assign(Object.assign({}, SWIPERSETTINGS), FEEDBACKSETTINGS)];
+    // создание свайперов, при наличии подходящих нодов
     swipers.forEach((item, index) => {
       swipersArray[index] = new Swiper(`.${item.classList[2]}`, set[index]);
     });
+
+    // перезагрузка свайпера с тренерами при изменении размеров вьюпорта (дебаунс на 0,5 секунды)
+    window.addEventListener('resize', debounce(() => {
+      swipersArray[0].params.slidesPerView = getSlidesNumber(CoachSlidesPerView);
+      swipersArray[0].update();
+    }, 500));
   }
-  return swipersArray;
 };

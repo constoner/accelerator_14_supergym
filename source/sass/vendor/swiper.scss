@@ -250,3 +250,26 @@ swiper-container:not(.swiper-watch-progress),
     transform: rotate(360deg);
   }
 }
+
+// effect fade module
+
+.swiper-fade {
+  &.swiper-free-mode {
+    .swiper__slide {
+      transition-timing-function: ease-out;
+    }
+  }
+  .swiper__slide {
+    pointer-events: none;
+    transition-property: opacity;
+    .swiper__slide {
+      pointer-events: none;
+    }
+  }
+  .swiper-slide-active {
+    &,
+    & .swiper-slide-active {
+      pointer-events: auto;
+    }
+  }
+}

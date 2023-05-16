@@ -28,40 +28,16 @@
     grid-template-columns: 1px 68px 1fr;
     grid-template-rows: min-content;
     column-gap: 15px;
-    row-gap: 14px;
+    row-gap: 0;
     padding: 40px 25px;
     padding-bottom: 15px;
     padding-right: 20px; // для скроллбара
-  }
-
-  // градиент для скрытия длинного отзыва
-  &::after {
-    position: absolute;
-    z-index: 5;
-    bottom: 25px;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 30px;
-    background-image: linear-gradient(
-      to top,
-      rgba($color-resolution-blue, 1),
-      80%,
-      rgba($color-resolution-blue, 0)
-    );
-    content: "";
-
-    @include vp-767 {
-      bottom: 15px;
-      height: 25px;
-    }
   }
 }
 
 .feedback-card__author {
   grid-area: title;
   margin: 0;
-  margin-bottom: 11px;
   font-weight: 700;
   font-size: 20px;
   line-height: 150%;
@@ -78,19 +54,33 @@
   grid-area: text;
   height: 100%;
   margin: 0;
+  padding-top: 11px;
   padding-right: 5px; // для скроллбара
   padding-bottom: 30px;
   font-size: 16px;
   line-height: 140%;
   overflow: auto;
+  mask-image: linear-gradient(
+    0deg,
+    rgba($color-default-white, 0) 10%,
+    rgba($color-default-white, 1) 30% 85%,
+    rgba($color-default-white, 0) 95%
+  );
+
+  @include vp-767 {
+    padding-top: 14px;
+    padding-bottom: 0;
+    text-align: center;
+    mask-image: linear-gradient(
+      0deg,
+      rgba($color-default-white, 0) 5%,
+      rgba($color-default-white, 1) 15% 90%,
+      rgba($color-default-white, 0) 100%
+    );
+  }
 
   @include focus {
     outline: 3px solid $color-default-black;
-  }
-
-  @include vp-767 {
-    padding-bottom: 15px;
-    text-align: center;
   }
 
   // стили для скроллбара

@@ -12,6 +12,7 @@
   width: 100%;
   height: 0;
   padding-bottom: calc(294 / 260 * 100%);
+  background-color: $color-gulf-blue;
 
   @include vp-1199 {
     padding-bottom: calc(294 / 268 * 100%);
@@ -29,7 +30,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #c5ccd7;
 
   & img {
     width: 100%;
@@ -78,22 +78,6 @@
   opacity: 0;
   will-change: opacity;
   transition: opacity $trans-default;
-
-  &::before {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 30px;
-    background-image: linear-gradient(
-      to top,
-      rgba($color-sapphire, 1),
-      50%,
-      rgba($color-sapphire, 0)
-    );
-    content: "";
-  }
 }
 
 .coach-card__scrolable {
@@ -102,6 +86,12 @@
   padding: 19.5%;
   padding-bottom: 18px;
   overflow: auto;
+  mask-image: linear-gradient(
+    0deg,
+    rgba($color-default-white, 0) 10%,
+    rgba($color-default-white, 1) 20% 80%,
+    rgba($color-default-white, 0) 90%
+  );
 
   @include vp-767 {
     padding: 21.92%;

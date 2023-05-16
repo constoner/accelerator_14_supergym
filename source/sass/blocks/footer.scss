@@ -104,8 +104,8 @@
 
   @include vp-767 {
     display: block;
-    margin-top: -28px;
-    margin-left: -11px;
+    margin-top: -22px;
+    margin-left: -6px;
     column-count: auto;
     column-width: 125px;
     column-gap: 31px;
@@ -114,29 +114,35 @@
     &::before {
       display: list-item;
       width: 100%;
-      height: 39px;
+      height: 29px;
       content: "";
     }
   }
 }
 
-.footer__link {
-  position: relative;
-  display: block;
+.footer__item {
   margin: 4px 10px;
-  padding: 0 10px;
-  font-size: 14px;
-  line-height: 16px;
-  color: inherit;
 
   @include vp-1199 {
     margin: 4px 5px;
   }
 
   @include vp-767 {
+    margin: 11px 0;
+  }
+}
+
+.footer__link {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 16px;
+  color: inherit;
+
+  @include vp-767 {
     width: fit-content;
-    margin: 2px 0;
-    padding: 10px;
+    padding: 5px;
     font-size: 16px;
     line-height: 19px;
   }
@@ -153,6 +159,13 @@
     content: "";
     opacity: 0;
     transition: opacity $trans-default;
+
+    @include vp-767 {
+      top: -3px;
+      bottom: -3px;
+      left: -3px;
+      right: -3px;
+    }
   }
 
   @include hover {

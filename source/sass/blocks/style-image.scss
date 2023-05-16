@@ -1,15 +1,21 @@
-
 // декоративное изображение
 .style-image {
   position: absolute;
-  z-index: 1;
-  top: 60%;
+  top: 33.45%;
   right: 0;
   overflow: hidden;
 
   & img {
     transform-origin: center;
-    transform: rotate(151deg) translate(-37%, -15%);
+    transform: rotate(150deg) translate(-29%, -16%);
+  }
+
+  @include vp-1199 {
+    top: 40.5%;
+
+    & img {
+      transform: scale(0.9) rotate(150deg) translate(-5%, -9%);
+    }
   }
 
   @include vp-767 {
