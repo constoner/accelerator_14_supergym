@@ -1,10 +1,17 @@
 import Swiper from '../../vendor/swiper-bundle';
-import debounce from '../../utils/debounce';
+// import debounce from '../../utils/debounce';
 
 
 const swipers = document.querySelectorAll('.swiper'); // коллекция нодов свайперов
-const coachSlides = document.querySelector('.swiper--coach').querySelectorAll('.swiper__slide'); // количество слайдов с тренерами
+const coachSlides = document.querySelector('.swiper--coach').querySelectorAll('.swiper__slide'); // слайды с тренерами
+// const feedbackSlides = document.querySelector('.swiper--feedback').querySelectorAll('.swiper__slide'); // слайды с тренерами
+// const coachScrollables = getScrollables(coachSlides, 12);
+// const feedbackScrollables = getScrollables(feedbackSlides, 21);
+// resetTabindex(coachScrollables);
+// resetTabindex(feedbackScrollables);
 
+// const DEBOUCE_DELAY = 500;
+const TRANSITION_DURATION = 400;
 const CoachSlidesPerView = {
   MOBILE: 1,
   TABLET: 2,
@@ -16,6 +23,7 @@ const SWIPERSETTINGS = {
   wrapperClass: 'swiper__wrapper',
   slideClass: 'swiper__slide',
   direction: 'horizontal',
+  speed: TRANSITION_DURATION,
   grabCursor: true,
   preventInteractionOnTransition: true,
 };
@@ -25,6 +33,7 @@ const COACHSETTINGS = {
   slidesPerView: getSlidesNumber(CoachSlidesPerView),
   loop: getSwiperContinious(CoachSlidesPerView),
   updateOnWindowResize: true,
+  watchSlidesProgress: true, // предотвращает переключение сладов при табах
   breakpoints: {
     320: {spaceBetween: 20},
     768: {spaceBetween: 30},
@@ -48,8 +57,8 @@ const FEEDBACKSETTINGS = {
     crossFade: true,
   },
   navigation: {
-    nextEl: '.swiper__button--next',
     prevEl: '.swiper__button--prev',
+    nextEl: '.swiper__button--next',
   },
 };
 
@@ -81,7 +90,53 @@ function getParameters() {
   return [Object.assign(Object.assign({}, SWIPERSETTINGS), COACHSETTINGS), Object.assign(Object.assign({}, SWIPERSETTINGS), FEEDBACKSETTINGS)];
 }
 
+// получение элементов со скроллом
+// function getScrollables(collection, diff) {
+//   const output = [];
+//   Array
+//       .from(collection)
+//       .forEach((item, i) => {
+//         output[i] = null;
+//         const inner = Array.from(item.querySelectorAll('div, p'));
+//         inner.forEach((el) => {
+//           if (el.scrollHeight - el.clientHeight > diff) {
+//             output[i] = el;
+//           }
+//         });
+//       });
+//   return output;
+// }
+
+// сброс табиндекса на скроллах
+// function resetTabindex(nodes) {
+//   nodes.forEach((el) => {
+//     if (el) {
+//       el.tabIndex = '-1';
+//     }
+//   });
+// }
+
+// установка табиндексов
+// function setTabIndex(slides, scrolls) {
+
+//   const slidesArray = Array.from(slides); // массив сладйов
+//   slidesArray.forEach((slide, index) => {
+//     const card = slide.querySelector('div'); // установка табиндекса для карточек в видимых слайдах
+//     // console.log(slide)
+//     card.tabIndex = '-1'; // сброс табиндекса
+
+//     if (slide.classList.contains('swiper-slide-visible')) {
+//       card.tabIndex = '0';
+//       if (scrolls[index]) {
+//         scrolls[index].tabIndex = '0';
+//       }
+//     }
+//   });
+// }
+
+
 export const initSwipers = () => {
+
   const set = getParameters(); // массив с параметрами
   const swipersArray = [];
   if (swipers.length) {
@@ -90,10 +145,19 @@ export const initSwipers = () => {
       swipersArray[index] = new Swiper(`.${item.classList[2]}`, set[index]);
     });
 
+    // const coachSwiper = swipersArray[0];
+    // const feedbackSwiper = swipersArray[1];
+
     // перезагрузка свайпера с тренерами при изменении размеров вьюпорта (дебаунс на 0,5 секунды)
-    window.addEventListener('resize', debounce(() => {
-      swipersArray[0].params.slidesPerView = getSlidesNumber(CoachSlidesPerView);
-      swipersArray[0].update();
-    }, 500));
+    // window.addEventListener('resize', debounce(() => {
+    //   coachSwiper.params.slidesPerView = getSlidesNumber(CoachSlidesPerView);
+    //   coachSwiper.update();
+    // }, DEBOUCE_DELAY));
+
+
+    // setTabIndex(coachSlides, coachScrollables);
+    // setTabIndex(feedbackSwiper, feedbackScrollables);
+    // coachSwiper.on('slideChange', () => setTimeout(() => setTabIndex(coachSlides, coachScrollables), TRANSITION_DURATION));
+    // feedbackSwiper.on('slideChange', () => setTimeout(() => setTabIndex(feedbackSlides, feedbackScrollables), TRANSITION_DURATION));
   }
 };
