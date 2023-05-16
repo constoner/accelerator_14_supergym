@@ -18,10 +18,6 @@ const SWIPERSETTINGS = {
   direction: 'horizontal',
   grabCursor: true,
   preventInteractionOnTransition: true,
-  navigation: {
-    nextEl: '.swiper__button--next',
-    prevEl: '.swiper__button--prev',
-  },
 };
 
 // настройки свайпера тренеров
@@ -37,6 +33,10 @@ const COACHSETTINGS = {
     1250: {spaceBetween: 30},
     1350: {spaceBetween: 40},
   },
+  navigation: {
+    prevEl: '.coach-swiper__button--prev',
+    nextEl: '.coach-swiper__button--next',
+  },
 };
 
 // настройки свайпера отзывов
@@ -46,6 +46,10 @@ const FEEDBACKSETTINGS = {
   effect: 'fade',
   fadeEffect: {
     crossFade: true,
+  },
+  navigation: {
+    nextEl: '.swiper__button--next',
+    prevEl: '.swiper__button--prev',
   },
 };
 
