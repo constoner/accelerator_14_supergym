@@ -52,10 +52,6 @@ const COACHSETTINGS = {
 const FEEDBACKSETTINGS = {
   slidesPerView: 1,
   spaceBetween: 100,
-  // effect: 'fade',
-  // fadeEffect: {
-  //   crossFade: true,
-  // },
   effect: 'creative',
   creativeEffect: {
     prev: {translate: [0, 0, -400]},

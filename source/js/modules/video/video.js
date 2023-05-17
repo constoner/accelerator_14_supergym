@@ -3,7 +3,7 @@ const videoCover = document.querySelector('[data-video-cover]');
 const videoSRC = document.querySelector('#player').dataset.videoSrc;
 
 export function initVideo() {
-
+  // промис для асинхронной загрузки API
   function loadAPI() {
     return new Promise(function (resolve, reject) {
       const tag = document.createElement('script');
@@ -17,14 +17,17 @@ export function initVideo() {
     });
   }
 
+  // после загрузки промиса вызываем функцию создания плеера
   const promise = loadAPI();
   promise
       .then(onYouTubeIframeAPIReady)
       .catch((err) => console.error(`Ошибка: ${err.message}`)); // eslint-disable-line no-console
 
+  // создание плеера
   let player;
 
   function onYouTubeIframeAPIReady() {
+    // недокументированная функция API
     window.YT.ready(function () {
       // eslint-disable-next-line no-undef
       player = new YT.Player('player', {
@@ -42,6 +45,7 @@ export function initVideo() {
     });
   }
 
+  // активация кнопки воспроизведения после загрузки плеера
   function onPlayerReady() {
     playButton.addEventListener('click', () => {
       player.playVideo();
@@ -50,15 +54,12 @@ export function initVideo() {
     });
   }
 
+  // возвращшение обложки видео по его завершению
   function onPlayerStateChange(event) {
     // eslint-disable-next-line no-undef
     if (event.data === YT.PlayerState.ENDED) {
-      endedVideo();
+      videoCover.dataset.videoCoverIsshown = true;
+      playButton.dataset.playButtonIsshown = true;
     }
-  }
-
-  function endedVideo() {
-    videoCover.dataset.videoCoverIsshown = true;
-    playButton.dataset.playButtonIsshown = true;
   }
 }

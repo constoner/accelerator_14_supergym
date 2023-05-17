@@ -2703,10 +2703,10 @@ button,
   padding: 19.5%;
   padding-bottom: 18px;
   overflow: auto;
-  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(255, 255, 255, 0)), color-stop(20%, white), color-stop(90%, rgba(255, 255, 255, 0)));
-  -webkit-mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, white 20% 80%, rgba(255, 255, 255, 0) 90%);
-          mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(255, 255, 255, 0)), color-stop(20%, white), color-stop(90%, rgba(255, 255, 255, 0)));
-          mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, white 20% 80%, rgba(255, 255, 255, 0) 90%);
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(255, 255, 255, 0)), color-stop(18%, white), color-stop(90%, rgba(255, 255, 255, 0)));
+  -webkit-mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 5%, white 18% 80%, rgba(255, 255, 255, 0) 90%);
+          mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(255, 255, 255, 0)), color-stop(18%, white), color-stop(90%, rgba(255, 255, 255, 0)));
+          mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 5%, white 18% 80%, rgba(255, 255, 255, 0) 90%);
   scrollbar-color: rgba(155, 155, 155, 0.8);
   scrollbar-width: thin;
 }
@@ -2718,7 +2718,7 @@ button,
 @media (max-width: 767px) {
   .coach-card__scrollable {
     padding: 19% 13%;
-    padding-bottom: 15%;
+    padding-bottom: 18%;
   }
 }
 .coach-card__scrollable.focus-visible:focus {
@@ -3828,12 +3828,12 @@ button,
 @media (max-width: 767px) {
   .feedback-card__text {
     padding-top: 14px;
-    padding-bottom: 0;
+    padding-bottom: 18px;
     text-align: center;
-    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(255, 255, 255, 0)), color-stop(15%, white), to(rgba(255, 255, 255, 0)));
-    -webkit-mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 5%, white 15% 90%, rgba(255, 255, 255, 0) 100%);
-            mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(255, 255, 255, 0)), color-stop(15%, white), to(rgba(255, 255, 255, 0)));
-            mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 5%, white 15% 90%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(3%, rgba(255, 255, 255, 0)), color-stop(15%, white), to(rgba(255, 255, 255, 0)));
+    -webkit-mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 3%, white 15% 90%, rgba(255, 255, 255, 0) 100%);
+            mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(3%, rgba(255, 255, 255, 0)), color-stop(15%, white), to(rgba(255, 255, 255, 0)));
+            mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 3%, white 15% 90%, rgba(255, 255, 255, 0) 100%);
   }
 }
 .feedback-card__text.focus-visible:focus {

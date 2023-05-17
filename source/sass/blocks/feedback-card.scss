@@ -73,11 +73,11 @@
 
   @include vp-767 {
     padding-top: 14px;
-    padding-bottom: 0;
+    padding-bottom: 18px;
     text-align: center;
     mask-image: linear-gradient(
       0deg,
-      rgba($color-default-white, 0) 5%,
+      rgba($color-default-white, 0) 3%,
       rgba($color-default-white, 1) 15% 90%,
       rgba($color-default-white, 0) 100%
     );

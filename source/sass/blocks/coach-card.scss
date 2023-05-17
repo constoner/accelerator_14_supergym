@@ -92,8 +92,8 @@
   overflow: auto;
   mask-image: linear-gradient(
     0deg,
-    rgba($color-default-white, 0) 10%,
-    rgba($color-default-white, 1) 20% 80%,
+    rgba($color-default-white, 0) 5%,
+    rgba($color-default-white, 1) 18% 80%,
     rgba($color-default-white, 0) 90%
   );
 
@@ -103,7 +103,7 @@
 
   @include vp-767 {
     padding: 19% 13%;
-    padding-bottom: 15%;
+    padding-bottom: 18%;
   }
 
   @include focus {
