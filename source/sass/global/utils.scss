@@ -44,11 +44,31 @@
 }
 
 .section-container {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 0 calc((100vw - 1366px) / 2); // хак для автоматисеского центрирования контейнера при ширине меньше макетной
+  background-image: linear-gradient(to right, $color-sapphire 50%, $color-default-white 50%); // хак для растяжения фона на всю ширину экрана
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: $color-light-slate-grey;
+    content: "";
+  }
 
   @include vp-1199 {
     grid-template-columns: 1fr;
+    padding: 0;
+    background-image: none;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
