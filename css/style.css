@@ -2184,12 +2184,11 @@ button,
   width: 100%;
   height: 100%;
   padding: 19.5%;
-  padding-bottom: 18px;
   overflow: auto;
-  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(255, 255, 255, 0)), color-stop(18%, white), color-stop(90%, rgba(255, 255, 255, 0)));
-  -webkit-mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 5%, white 18% 80%, rgba(255, 255, 255, 0) 90%);
-  mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(255, 255, 255, 0)), color-stop(18%, white), color-stop(90%, rgba(255, 255, 255, 0)));
-  mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 5%, white 18% 80%, rgba(255, 255, 255, 0) 90%);
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(255, 255, 255, 0)), color-stop(19%, white), color-stop(90%, rgba(255, 255, 255, 0)));
+  -webkit-mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, white 19% 80%, rgba(255, 255, 255, 0) 90%);
+  mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(255, 255, 255, 0)), color-stop(19%, white), color-stop(90%, rgba(255, 255, 255, 0)));
+  mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, white 19% 80%, rgba(255, 255, 255, 0) 90%);
   scrollbar-color: rgba(155, 155, 155, 0.8);
   scrollbar-width: thin;
 }
@@ -4144,6 +4143,10 @@ button,
   .coach-card__scrollable {
     padding: 19% 13%;
     padding-bottom: 18%;
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(255, 255, 255, 0)), color-stop(18%, white), color-stop(90%, rgba(255, 255, 255, 0)));
+    -webkit-mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 5%, white 18% 80%, rgba(255, 255, 255, 0) 90%);
+    mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(255, 255, 255, 0)), color-stop(18%, white), color-stop(90%, rgba(255, 255, 255, 0)));
+    mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 5%, white 18% 80%, rgba(255, 255, 255, 0) 90%);
   }
 
   .features {
