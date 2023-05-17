@@ -86,7 +86,8 @@
     outline: 2px solid $color-light-slate-grey;
   }
 
-  &:not(.crutch):active {
+  /* stylelint-disable-next-line */
+  &:not(.crutch:hover):active {
     opacity: 0.2;
   }
 }
@@ -178,7 +179,8 @@
     outline: 2px solid $color-light-slate-grey;
   }
 
-  &:not(.crutch):active {
+  /* stylelint-disable-next-line */
+  &:not(.crutch:hover):active {
     opacity: 0.2;
   }
 }

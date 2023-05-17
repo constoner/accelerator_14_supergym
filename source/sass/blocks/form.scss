@@ -151,7 +151,8 @@
     outline: 3px solid $color-default-black;
   }
 
-  &:not(.crutch):active {
+  /* stylelint-disable-next-line */
+  &:not(.crutch:hover):active {
     opacity: 0.2;
   }
 

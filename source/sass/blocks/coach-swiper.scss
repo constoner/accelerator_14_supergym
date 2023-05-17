@@ -83,7 +83,8 @@
     outline: 2px solid rgba($color-dark-gray, 0.8);
   }
 
-  &:not(.crutch):active {
+  /* stylelint-disable-next-line */
+  &:not(.crutch:hover):active {
     opacity: 0.2;
   }
 

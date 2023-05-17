@@ -109,7 +109,8 @@
     }
   }
 
-  &:not(.crutch):active {
+  /* stylelint-disable-next-line */
+  &:not(.crutch:hover):active {
     opacity: 0.2;
   }
 }
