@@ -2611,6 +2611,9 @@ button,
       -ms-user-select: none;
           user-select: none;
 }
+.coach-card.focus-visible:focus {
+  outline: 1px solid #000000;
+}
 
 .coach-card__wrapper {
   position: relative;
@@ -2717,6 +2720,11 @@ button,
     padding: 19% 13%;
     padding-bottom: 15%;
   }
+}
+.coach-card__scrollable.focus-visible:focus {
+  -webkit-mask-image: none;
+          mask-image: none;
+  outline: 3px solid #000000;
 }
 .coach-card__scrollable::-webkit-scrollbar {
   width: 4px;
@@ -3712,6 +3720,9 @@ button,
     -ms-grid-column: 3;
   }
 }
+.feedback-card.focus-visible:focus {
+  outline: 3px solid #000000;
+}
 
 .feedback-card__author {
   -ms-grid-row: 2;
@@ -3826,6 +3837,8 @@ button,
   }
 }
 .feedback-card__text.focus-visible:focus {
+  -webkit-mask-image: none;
+          mask-image: none;
   outline: 3px solid #000000;
 }
 .feedback-card__text::-webkit-scrollbar {

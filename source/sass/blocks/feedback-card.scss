@@ -33,6 +33,10 @@
     padding-bottom: 15px;
     padding-right: 20px; // для скроллбара
   }
+
+  @include focus {
+    outline: 3px solid $color-default-black;
+  }
 }
 
 .feedback-card__author {
@@ -80,6 +84,7 @@
   }
 
   @include focus {
+    mask-image: none;
     outline: 3px solid $color-default-black;
   }
 
