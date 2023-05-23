@@ -1515,9 +1515,6 @@ button,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 @media (max-width: 1199px) {
   .about__container {
@@ -1525,6 +1522,9 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
   }
 }
@@ -1562,6 +1562,7 @@ button,
 }
 .about__content h2 {
   margin: 0;
+  margin-top: 21px;
   margin-bottom: 7px;
   font-size: 48px;
   line-height: 58px;
@@ -1609,6 +1610,7 @@ button,
 }
 
 .about__image-container {
+  position: relative;
   -ms-flex-negative: 1;
       flex-shrink: 1;
   width: 660px;
@@ -1657,7 +1659,7 @@ button,
 .about__video {
   width: 364px;
   margin-top: -113px;
-  left: clamp(420px, 37.7%, 2000px);
+  left: -9.5%;
 }
 @media (max-width: 1199px) {
   .about__video {
@@ -1672,7 +1674,6 @@ button,
 @media (max-width: 767px) {
   .about__video {
     width: 100vw;
-    margin-left: -15px;
     margin-top: 40px;
     left: unset;
     -webkit-transform: translate(0, 0);

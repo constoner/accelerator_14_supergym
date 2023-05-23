@@ -15,10 +15,10 @@
 .about__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   @include vp-1199 {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
@@ -53,6 +53,7 @@
 
   & h2 {
     margin: 0;
+    margin-top: 21px;
     margin-bottom: 7px;
     font-size: 48px;
     line-height: 58px;
@@ -99,6 +100,7 @@
 }
 
 .about__image-container {
+  position: relative;
   flex-shrink: 1;
   width: 660px;
 
@@ -140,7 +142,7 @@
 .about__video {
   width: 364px;
   margin-top: -113px;
-  left: clamp(420px, 37.7%, 2000px);
+  left: -9.5%;
 
   @include vp-1199 {
     width: calc(266 / 678 * 100%);
@@ -151,7 +153,6 @@
 
   @include vp-767 {
     width: 100vw;
-    margin-left: -15px;
     margin-top: 40px;
     left: unset;
     transform: translate(0, 0);
