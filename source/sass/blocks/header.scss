@@ -12,7 +12,7 @@
   z-index: 4;
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 30px;
+  column-gap: 30px;
   color: $color-default-white;
 
   & a {
@@ -22,6 +22,7 @@
 }
 
 .header__logo {
+  grid-column: 1/2;
   position: relative;
   padding: 10px 0;
 
@@ -67,8 +68,10 @@
 }
 
 .header__link {
+  grid-column: 2/-1;
   position: relative;
   display: block;
+  margin-bottom: 12px;
   font-family: $ff-title;
   font-style: normal;
   font-weight: 600;

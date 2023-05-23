@@ -1062,7 +1062,9 @@ button,
   display: grid;
   -ms-grid-columns: 1fr auto;
   grid-template-columns: 1fr auto;
-  gap: 30px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   color: #ffffff;
 }
 .header__container a {
@@ -1073,6 +1075,9 @@ button,
 }
 
 .header__logo {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
   position: relative;
   padding: 10px 0;
   /* stylelint-disable-next-line */
@@ -1114,8 +1119,10 @@ button,
 }
 
 .header__link {
+  grid-column: 2/-1;
   position: relative;
   display: block;
+  margin-bottom: 12px;
   font-family: "Alumni Sans", "Arial Narrow", sans-serif;
   font-style: normal;
   font-weight: 600;
