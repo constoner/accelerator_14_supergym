@@ -80,6 +80,7 @@
 .contacts__wrapper {
   width: fit-content;
   margin-bottom: 18px;
+  break-inside: avoid;
 
   dt {
     width: fit-content;
@@ -89,6 +90,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
+    break-after: avoid;
 
     @include vp-1199 {
       margin-bottom: 6px;
@@ -102,6 +104,7 @@
     padding: 0;
     font-size: 14px;
     line-height: 21px;
+    break-inside: avoid;
 
     @include vp-1199 {
       font-size: 18px;
@@ -112,6 +115,7 @@
   a {
     $link-color: $color-sapphire;
     position: relative;
+    display: block;
 
     &::after {
       position: absolute;

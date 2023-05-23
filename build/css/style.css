@@ -4232,6 +4232,9 @@ button,
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 18px;
+  -webkit-column-break-inside: avoid;
+     -moz-column-break-inside: avoid;
+          break-inside: avoid;
 }
 .contacts__wrapper dt {
   width: -webkit-fit-content;
@@ -4243,6 +4246,9 @@ button,
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
+  -webkit-column-break-after: avoid;
+     -moz-column-break-after: avoid;
+          break-after: avoid;
 }
 @media (max-width: 1199px) {
   .contacts__wrapper dt {
@@ -4258,6 +4264,9 @@ button,
   padding: 0;
   font-size: 14px;
   line-height: 21px;
+  -webkit-column-break-inside: avoid;
+     -moz-column-break-inside: avoid;
+          break-inside: avoid;
 }
 @media (max-width: 1199px) {
   .contacts__wrapper dd {
@@ -4267,6 +4276,7 @@ button,
 }
 .contacts__wrapper a {
   position: relative;
+  display: block;
 }
 .contacts__wrapper a::after {
   position: absolute;
