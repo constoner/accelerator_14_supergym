@@ -2869,8 +2869,8 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 240px 1fr;
   grid-template-columns: 1fr 240px 1fr;
-  -ms-grid-rows: 236px;
-  grid-template-rows: 236px;
+  -ms-grid-rows: minmax(236px, 1fr);
+  grid-template-rows: minmax(236px, 1fr);
   -webkit-column-gap: 60px;
      -moz-column-gap: 60px;
           column-gap: 60px;
@@ -3025,6 +3025,9 @@ button,
      -moz-column-gap: 30px;
           column-gap: 30px;
   max-width: 340px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-bottom: -7px;
 }
 @media (max-width: 767px) {

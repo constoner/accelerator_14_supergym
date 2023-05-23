@@ -42,7 +42,7 @@
 .features__list {
   display: grid;
   grid-template-columns: 1fr 240px 1fr;
-  grid-template-rows: min(236px);
+  grid-template-rows: minmax(236px, 1fr);
   column-gap: 60px;
   width: calc(1040 / 1366 * 100%);
   max-width: 1160px;
