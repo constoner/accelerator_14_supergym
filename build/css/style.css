@@ -1263,7 +1263,9 @@ button,
 .hero__content {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   -ms-grid-row-align: end;
       align-self: end;
   display: -ms-grid;
@@ -1277,17 +1279,19 @@ button,
 }
 @media (max-width: 1199px) {
   .hero__content {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
     max-width: 48%;
-    -ms-grid-columns: auto auto;
-    grid-template-columns: auto auto;
     margin-bottom: 24px;
   }
 }
 @media (max-width: 767px) {
   .hero__content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-grid-columns: 1fr -webkit-min-content;
+    -ms-grid-columns: 1fr min-content;
+    grid-template-columns: 1fr -webkit-min-content;
+    grid-template-columns: 1fr min-content;
     -ms-grid-row-align: unset;
         align-self: unset;
     width: 100%;

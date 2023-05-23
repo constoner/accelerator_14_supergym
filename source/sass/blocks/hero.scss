@@ -62,7 +62,7 @@
 
 .hero__content {
   flex-shrink: 0;
-  width: auto;
+  width: fit-content;
   align-self: end;
   display: grid;
   grid-template-columns: 1fr min-content;
@@ -73,13 +73,13 @@
   margin-bottom: 44px;
 
   @include vp-1199 {
-    flex-grow: 1;
     max-width: 48%;
-    grid-template-columns: auto auto;
     margin-bottom: 24px;
   }
 
   @include vp-767 {
+    flex-grow: 1;
+    grid-template-columns: 1fr min-content;
     align-self: unset;
     width: 100%;
     max-width: 500px;
