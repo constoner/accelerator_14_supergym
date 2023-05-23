@@ -3724,8 +3724,7 @@ button,
   width: 100%;
   height: 100%;
   padding: 55px 62px;
-  padding-right: 57px;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
   color: #ffffff;
   background-color: #1c3374;
   -webkit-user-select: none;
@@ -3736,8 +3735,7 @@ button,
 @media (max-width: 1199px) {
   .feedback-card {
     padding: 55px 65px;
-    padding-right: 60px;
-    padding-bottom: 25px;
+    padding-bottom: 26px;
   }
 }
 @media (max-width: 767px) {
@@ -3753,8 +3751,7 @@ button,
             column-gap: 15px;
     row-gap: 0;
     padding: 40px 25px;
-    padding-bottom: 15px;
-    padding-right: 20px;
+    padding-bottom: 16px;
   }
   .feedback-card > .discount__image {
     -ms-grid-row: 1;
@@ -3804,17 +3801,9 @@ button,
   height: 100%;
   margin: 0;
   padding-top: 11px;
-  padding-right: 5px;
   padding-bottom: 30px;
   font-size: 16px;
   line-height: 140%;
-  overflow: auto;
-  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(255, 255, 255, 0)), color-stop(30%, white), color-stop(95%, rgba(255, 255, 255, 0)));
-  -webkit-mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, white 30% 85%, rgba(255, 255, 255, 0) 95%);
-          mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(255, 255, 255, 0)), color-stop(30%, white), color-stop(95%, rgba(255, 255, 255, 0)));
-          mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, white 30% 85%, rgba(255, 255, 255, 0) 95%);
-  scrollbar-color: rgba(155, 155, 155, 0.8);
-  scrollbar-width: thin;
 }
 
 @media (max-width: 767px) {
@@ -3872,33 +3861,7 @@ button,
     padding-top: 14px;
     padding-bottom: 18px;
     text-align: center;
-    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(3%, rgba(255, 255, 255, 0)), color-stop(15%, white), to(rgba(255, 255, 255, 0)));
-    -webkit-mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 3%, white 15% 90%, rgba(255, 255, 255, 0) 100%);
-            mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(3%, rgba(255, 255, 255, 0)), color-stop(15%, white), to(rgba(255, 255, 255, 0)));
-            mask-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 3%, white 15% 90%, rgba(255, 255, 255, 0) 100%);
   }
-}
-.feedback-card__text.focus-visible:focus {
-  -webkit-mask-image: none;
-          mask-image: none;
-  outline: 3px solid #000000;
-}
-.feedback-card__text::-webkit-scrollbar {
-  width: 4px;
-}
-.feedback-card__text::-webkit-scrollbar-track {
-  background: transparent;
-}
-.feedback-card__text::-webkit-scrollbar-thumb {
-  background-color: rgba(155, 155, 155, 0.8);
-  border-radius: 20px;
-  border: transparent;
-}
-.feedback-card__text::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(155, 155, 155, 0.6);
-}
-.feedback-card__text::-webkit-scrollbar-thumb:active {
-  background-color: rgba(155, 155, 155, 0.4);
 }
 
 .feedback-card__image {

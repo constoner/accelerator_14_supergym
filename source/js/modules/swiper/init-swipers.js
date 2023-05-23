@@ -52,6 +52,7 @@ const COACHSETTINGS = {
 const FEEDBACKSETTINGS = {
   slidesPerView: 1,
   spaceBetween: 100,
+  autoHeight: true,
   effect: 'creative',
   creativeEffect: {
     prev: {translate: [0, 0, -400]},
