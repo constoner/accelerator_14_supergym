@@ -53,11 +53,11 @@ const FEEDBACKSETTINGS = {
   slidesPerView: 1,
   spaceBetween: 100,
   autoHeight: true,
-  effect: 'creative',
-  creativeEffect: {
-    prev: {translate: [0, 0, -400]},
-    next: {translate: ['125%', 0, 0]},
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
   },
+
   navigation: {
     prevEl: '.swiper__button--prev',
     nextEl: '.swiper__button--next',
