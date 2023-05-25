@@ -31,6 +31,7 @@
   flex-shrink: 0;
   width: 360px;
   margin: 0 60px;
+  margin-right: 70px;
   padding-top: 17px;
 
   @include vp-1199 {
@@ -140,9 +141,10 @@
 }
 
 .about__video {
+  position: relative;
   width: 364px;
   margin-top: -113px;
-  left: -9.5%;
+  left: -63px;
 
   @include vp-1199 {
     width: calc(266 / 678 * 100%);

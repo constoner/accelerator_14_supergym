@@ -1543,6 +1543,7 @@ button,
       flex-shrink: 0;
   width: 360px;
   margin: 0 60px;
+  margin-right: 70px;
   padding-top: 17px;
 }
 @media (max-width: 1199px) {
@@ -1661,9 +1662,10 @@ button,
 }
 
 .about__video {
+  position: relative;
   width: 364px;
   margin-top: -113px;
-  left: -9.5%;
+  left: -63px;
 }
 @media (max-width: 1199px) {
   .about__video {
