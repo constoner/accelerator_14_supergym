@@ -1200,7 +1200,7 @@ button,
 .header__link::before {
   position: absolute;
   top: -5px;
-  bottom: 5px;
+  bottom: -5px;
   left: -10px;
   right: -10px;
   display: block;
@@ -1414,6 +1414,7 @@ button,
   flex-shrink: 0;
   width: 360px;
   margin: 0 60px;
+  margin-right: 70px;
   padding-top: 17px;
 }
 
@@ -1467,9 +1468,10 @@ button,
 }
 
 .about__video {
+  position: relative;
   width: 364px;
   margin-top: -113px;
-  left: -9.5%;
+  left: -63px;
 }
 
 .video {
@@ -1607,9 +1609,6 @@ button,
 }
 
 .style-image {
-  position: absolute;
-  top: 33.45%;
-  right: 0;
   overflow: hidden;
 }
 
@@ -1650,6 +1649,12 @@ button,
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.membership__image {
+  position: absolute;
+  top: 556px;
+  right: 0;
 }
 
 .tabs {
@@ -1894,6 +1899,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #ed0233;
 }
 
 .promo__image {
@@ -3489,10 +3495,6 @@ button,
     transform: translate(-50%, -50%) scale(0.73);
   }
 
-  .style-image {
-    top: 40.5%;
-  }
-
   .style-image img {
     -webkit-transform: scale(0.9) rotate(150deg) translate(-5%, -9%);
     -ms-transform: scale(0.9) rotate(150deg) translate(-5%, -9%);
@@ -3517,6 +3519,11 @@ button,
     margin: 0 auto;
   }
 
+  .membership__image {
+    top: unset;
+    bottom: -75px;
+  }
+
   .tabs__controls {
     margin-bottom: 47px;
   }
@@ -3534,8 +3541,13 @@ button,
   }
 
   .promo__container {
-    max-width: 723px;
-    margin: 0 auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .promo__image {
+    max-width: 600px;
   }
 
   .promo__content {
@@ -4011,10 +4023,6 @@ button,
     padding-bottom: 52.1875%;
   }
 
-  .style-image {
-    display: none;
-  }
-
   .membership {
     padding: 70px 0;
   }
@@ -4031,6 +4039,10 @@ button,
     gap: 35px;
     width: 100%;
     max-width: 450px;
+  }
+
+  .membership__image {
+    display: none;
   }
 
   .tabs__controls::before {
