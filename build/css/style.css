@@ -1846,9 +1846,6 @@ button,
 }
 
 .style-image {
-  position: absolute;
-  top: 33.45%;
-  right: 0;
   overflow: hidden;
 }
 .style-image img {
@@ -1860,18 +1857,10 @@ button,
           transform: rotate(150deg) translate(-29%, -16%);
 }
 @media (max-width: 1199px) {
-  .style-image {
-    top: 40.5%;
-  }
   .style-image img {
     -webkit-transform: scale(0.9) rotate(150deg) translate(-5%, -9%);
         -ms-transform: scale(0.9) rotate(150deg) translate(-5%, -9%);
             transform: scale(0.9) rotate(150deg) translate(-5%, -9%);
-  }
-}
-@media (max-width: 767px) {
-  .style-image {
-    display: none;
   }
 }
 
@@ -1943,6 +1932,22 @@ button,
     gap: 35px;
     width: 100%;
     max-width: 450px;
+  }
+}
+
+.membership__image {
+  position: absolute;
+  top: 556px;
+  right: 0;
+}
+@media (max-width: 1199px) {
+  .membership__image {
+    top: 40.5%;
+  }
+}
+@media (max-width: 767px) {
+  .membership__image {
+    display: none;
   }
 }
 

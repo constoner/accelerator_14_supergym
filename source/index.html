@@ -116,12 +116,12 @@
                 <div class="video__cover" aria-hidden="true" data-video-cover data-video-cover-isShown=true>
                   <picture>
                     <source type="image/webp" srcset="./img/video-cover.webp, ./img/video-cover@2x.webp 2x">
-                    <img src="./img/video-cover.jpg" srcset="./img/video-cover@2x.jpg 2x" width="364" height="228" alt=""
-                      aria-hidden="true">
+                    <img src="./img/video-cover.jpg" srcset="./img/video-cover@2x.jpg 2x" width="364" height="228"
+                      alt="" aria-hidden="true">
                   </picture>
                 </div>
-                <button class="video__button" type="button" aria-label="Воспроизвести видео." title="Play" data-play-button
-                  data-play-button-isShown=true></button>
+                <button class="video__button" type="button" aria-label="Воспроизвести видео." title="Play"
+                  data-play-button data-play-button-isShown=true></button>
                 <div class="video__container">
                   <div id="player" data-video-src="9TZXsZItgdw"></div>
                 </div>
@@ -133,12 +133,24 @@
 
       <!-- абонементы -->
       <section class="membership" id="membership">
+
+        <!-- декортивный элемент -->
+        <div class="membership__image style-image" aria-hidden="true">
+          <picture>
+            <source media="(max-width: 767px)"
+              srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9Im5vbmUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCgk8cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIvPg0KPC9zdmc+">
+            <source type="image/webp" srcset="./img/equipment.webp, ./img/equipment@2x.webp 2x">
+            <img src="./img/equipment.jpg" srcset="./img/equipment@2x.jpg 2x" width="322" height="385" loading="lazy"
+              alt="" aria-hidden="true">
+          </picture>
+        </div>
+
         <div class="container">
           <div class="membership__container">
             <h2>Абонементы</h2>
 
             <!-- табы -->
-            <div class="membership__tabs tabs no-transition-global" data-tabs="parent" data-height="max">
+            <div class="membership__tabs tabs no-transition-global" data-tabs="parent">
               <div class="tabs__controls" data-tabs="controls">
                 <button class="tabs__control is-active" type="button" data-tabs="control">1 месяц</button>
                 <button class="tabs__control" type="button" data-tabs="control">6 месяцев</button>
@@ -767,17 +779,6 @@
             </div>
           </div>
         </section>
-      </div>
-
-      <!-- декортивный элемент -->
-      <div class="style-image" aria-hidden="true">
-        <picture>
-          <source media="(max-width: 767px)"
-            srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIGZpbGw9Im5vbmUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCgk8cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIvPg0KPC9zdmc+">
-          <source type="image/webp" srcset="./img/equipment.webp, ./img/equipment@2x.webp 2x">
-          <img src="./img/equipment.jpg" srcset="./img/equipment@2x.jpg 2x" width="322" height="385" loading="lazy"
-            alt="" aria-hidden="true">
-        </picture>
       </div>
     </main>
 

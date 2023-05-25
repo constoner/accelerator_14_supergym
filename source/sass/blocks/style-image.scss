@@ -1,8 +1,5 @@
 // декоративное изображение
 .style-image {
-  position: absolute;
-  top: 33.45%;
-  right: 0;
   overflow: hidden;
 
   & img {
@@ -11,14 +8,8 @@
   }
 
   @include vp-1199 {
-    top: 40.5%;
-
     & img {
       transform: scale(0.9) rotate(150deg) translate(-5%, -9%);
     }
-  }
-
-  @include vp-767 {
-    display: none;
   }
 }
