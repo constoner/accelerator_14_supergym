@@ -66,7 +66,8 @@
   right: 0;
 
   @include vp-1199 {
-    top: 40.5%;
+    top: unset;
+    bottom: -75px;
   }
 
   @include vp-767 {
