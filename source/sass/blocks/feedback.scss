@@ -76,7 +76,7 @@
 .feedback__button {
   position: absolute;
   z-index: 100;
-  top: 46.1%;
+  top: 185px;
   display: block;
   width: 27px;
   height: 33px;
@@ -95,7 +95,7 @@
   box-sizing: content-box;
 
   @include vp-767 {
-    top: 46%;
+    top: 198px;
     width: 32px;
     height: 32px;
     padding: 0;
